@@ -3,11 +3,11 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_serenity_theme'
   s.version     = '2.0.4'
-  s.summary     = 'TODO: Add gem summary here'
-  s.description = 'TODO: Add (optional) gem description here'
+  s.summary     = 'Theme for ThemeForest Serenity theme: http://themeforest.net/item/serenity-minimal-responsive-ecommerce-template/4541605'
+  s.description = 'Theme for ThemeForest Serenity theme: http://themeforest.net/item/serenity-minimal-responsive-ecommerce-template/4541605'
   s.required_ruby_version = '>= 1.9.3'
 
-  # s.author    = 'You'
+  s.author    = 'Daryl Winger'
   # s.email     = 'you@example.com'
   # s.homepage  = 'http://www.spreecommerce.com'
 
@@ -28,4 +28,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'selenium-webdriver'
   s.add_development_dependency 'simplecov'
   s.add_development_dependency 'sqlite3'
+
 end
+
