@@ -1,0 +1,10 @@
+<% if Monologue.sidebar %>
+  <div class="span4 sidebar">
+    <% Monologue.sidebar.each do |ext| %>
+       <aside>
+         <%= render partial: "monologue/sidebar/#{ext}" %>
+       </aside>
+    <% end %>
+  </div>
+<% end %>
+

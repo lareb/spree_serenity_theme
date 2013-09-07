@@ -1,2 +1,3 @@
-//= require_tree .
+//= require store/shop
+//= require store/script
 

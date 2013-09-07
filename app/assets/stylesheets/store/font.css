@@ -25,7 +25,7 @@
 /* fix buttons height */
   line-height: 1em;
 /* you can be more comfortable with increased icons size */
-/* font-size: 120%; */
+  font-size: 110%;
 }
 
 
@@ -315,3 +315,4 @@
 .icon-clock:before { content: '🕔'; } /* '\1f554' */
 .icon-rocket:before { content: '🚀'; } /* '\1f680' */
 .icon-block:before { content: '🚫'; } /* '\1f6ab' */
+

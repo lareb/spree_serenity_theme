@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en"> <!--<![endif]-->
+  <head>
+    <%= render 'layouts/monologue/application/head' %>
+    <%= stylesheet_link_tag 'store/all', :media => 'screen' %>
+    <%= javascript_include_tag 'store/all' %>
+  </head>
+  <body class="wf-active">
+    <%= render "spree/shared/header" %>
+    <div class="container">
+      <section class="blog">
+        <div class="row">
+			    <header class="span12 prime">
+			      <h3>
+			        <div class="pull-right">
+                <%= rss_icon %>
+                <%= render partial: "layouts/monologue/application/social_icons" %>
+              </div>
+			        <a href="<%= root_path %>"><%=Monologue.site_name%></a>
+		        </h3>
+		      </header>
+	      </div>
+        <% flash.each do |name, msg| %>
+          <div class="flash-notice">
+            <%= msg %>
+          </div>
+        <% end %>
+		    <div class="wrap">
+			    <div class="row-fluid">
+				    <div class="span8 list">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%= render 'layouts/monologue/application/sidebar' %>
+      </section>
+    </div>
+    <%= render "spree/shared/footer" %>
+    <% if content_for?(:footer) %>
+      <footer>
+        <%= yield :footer %>
+      </footer>
+    <% end %>
+    <%= render 'layouts/monologue/application/disqus' %>
+    <%= render 'layouts/monologue/application/gauge_analytics' %>
+  </body>
+</html>
+

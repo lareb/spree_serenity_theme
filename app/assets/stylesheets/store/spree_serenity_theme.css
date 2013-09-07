@@ -1,4 +1,6 @@
 /*
- *= require_tree .
+ *= require store/bootstrap.min
+ *= require store/font
+ *= require store/style
 */
 

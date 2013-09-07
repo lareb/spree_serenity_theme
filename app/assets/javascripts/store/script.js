@@ -2,16 +2,16 @@
 // Tweetjs function
 // ================
 
-$("#tweet").tweet({
-  avatar_size: 32,
-  count: 2,
-  username : 'envato',
-  //query: "envato",
-  template: "{text} <br />{time}",
-  loading_text: "searching twitter..."
-}).bind("loaded", function() {
-    $(this).find("a").attr("target","_blank");
-});
+//$("#tweet").tweet({
+//  avatar_size: 32,
+//  count: 2,
+//  username : 'envato',
+//  //query: "envato",
+//  template: "{text} <br />{time}",
+//  loading_text: "searching twitter..."
+//}).bind("loaded", function() {
+//    $(this).find("a").attr("target","_blank");
+//});
 
 // ===============
 // Slider function
@@ -28,7 +28,7 @@ function slider(){
     //itemMargin: 5 ,
     asNavFor: '#flexslider'
   });
-   
+
   $('#flexslider').flexslider({
     animation: "slide",
     controlNav: true,
@@ -38,7 +38,7 @@ function slider(){
 	animationSpeed: 600,
     sync: "#flexcarousel"
   });
-  
+
   // Thubnail
   $('#flexcarousel-product').flexslider({
     animation: "slide",
@@ -48,7 +48,7 @@ function slider(){
     itemWidth: 115,
     asNavFor: "#flexslider-product"
   });
-  
+
   $('#flexslider-product').flexslider({
     animation: "slide",
     controlNav: true,
@@ -72,7 +72,7 @@ function slider(){
 // ===================
 
 function navWidth(){
-	var nav = $('.horizontal-nav ul li').not('.horizontal-nav ul li li'), 
+	var nav = $('.horizontal-nav ul li').not('.horizontal-nav ul li li'),
 	size = $('.horizontal-nav ul li').not('.horizontal-nav ul li li').size(),
 	percent = 100/size;
 	nav.css('width', percent+'%').parent().show();
@@ -84,13 +84,13 @@ $('.horizontal-nav ul li').mouseenter(function(){
 	$('ul', this).stop().slideUp(150);
 });
 
-if ($.browser.msie) {
-	//Back off
-} else {
+//if ($.browser.msie) {
+//	//Back off
+//} else {
 	selectnav('nav', {
 		label: 'Menu'
-	});	
-}
+	});
+//}
 
 // ======================
 // Thumbnail Hover Effect
@@ -98,18 +98,18 @@ if ($.browser.msie) {
 
 function thumbHover(){
 
-	if ($('html').hasClass('csstransforms3d')) {	
-		
-		$('.thumb').removeClass('scroll').addClass('flip');		
+	if ($('html').hasClass('csstransforms3d')) {
+
+		$('.thumb').removeClass('scroll').addClass('flip');
 		$('.thumb.flip').hover(
 			function () {
 				$(this).find('.thumb-wrapper').addClass('flipIt');
 			},
 			function () {
-				$(this).find('.thumb-wrapper').removeClass('flipIt');			
+				$(this).find('.thumb-wrapper').removeClass('flipIt');
 			}
 		);
-		
+
 	} else {
 
 		$('.thumb').hover(
@@ -117,7 +117,7 @@ function thumbHover(){
 				$(this).find('.thumb-detail').stop().animate({bottom:0}, 500, 'easeOutCubic');
 			},
 			function () {
-				$(this).find('.thumb-detail').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');			
+				$(this).find('.thumb-detail').stop().animate({bottom: ($(this).height() * -1) }, 500, 'easeOutCubic');
 			}
 		);
 
@@ -146,15 +146,15 @@ $(function(){
 		e.preventDefault;
 		$('.cartbubble').slideUp();
 	});
-	
+
 	// Tab function
 	$('#myTab a, #myTab button').click(function (e) {
 		e.preventDefault();
 		$(this).tab('show');
 	});
-	
+
 	// Fancybox function
-	$('#flexslider-product .slides a').fancybox();
+//	$('#flexslider-product .slides a').fancybox();
 
 	// Toggle function
 	$('.product h6.subhead').on('click', function(){
@@ -162,9 +162,10 @@ $(function(){
 	});
 
     $(".collapse").collapse();
-	
+
 	slider();
 	navWidth();
 	thumbHover();
 
 });
+

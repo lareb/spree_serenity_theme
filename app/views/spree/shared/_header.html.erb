@@ -1,0 +1,56 @@
+<header id="header" class="header-container" data-hook>
+	<div class="top-header clearfix">
+		<div class="container welcome">
+			<div class="row-fluid">
+				<div class="pull-left greet">
+					Welcome shopper, <%= link_to "login here", spree.login_path %>
+				</div>
+				<div class="pull-right cart tright">
+				  <div class="counter">
+				    <i class="icon-basket"></i>
+  				  <span id="link-to-cart" data-hook><%= defined?(current_cart) ? link_to_cart("Your cart") : link_to("Your cart", spree.cart_path) %></span>
+				  </div>
+
+					<!-- Cart Updates
+					<div class="counter">
+						<a href="javascript:void(0);"><i class="icon-basket"></i> Your cart </a> : <span class="theme">$139</span>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+		</div>
+
+		<!-- ================ -->
+		<!-- Branding section -->
+		<!-- ================ -->
+
+		<div class="container head">
+			<div class="row">
+				<div class="span12 clearfix">
+					<div class="top row">
+						<figure class="span8 logo image"><%= logo %></figure>
+						<div class="cart span4">
+						  <%= render :partial => 'spree/shared/search' %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- ================ -->
+		<!-- Main Nav section -->
+		<!-- ================ -->
+
+		<div class="container-menu">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<nav class="horizontal-nav full-width">
+					  <%= render "shared/menu" %>
+				</div>
+			</div>
+		</div>
+		</div>
+</header>
+

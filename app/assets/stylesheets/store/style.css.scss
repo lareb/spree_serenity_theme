@@ -84,12 +84,30 @@ embed {max-width:100%;}
 .standard header {text-align: center; padding:20px 0}
 .call-to-action {margin-top: 20px}
 .top {padding-top: 20px; padding-bottom: 20px}
-.top .logo a {line-height:1em; } 
+.top .logo a {line-height:1em; }
 .top .logo.image img {max-width:250px}
-.top .cart form {position: relative; margin-top:10px}
-.top .cart form button {position: absolute; top:8px; right: -4px; border:none; background: none}
-.top .top-search { margin-bottom:0; margin-top:5px; border-radius:0; width: 146px; float: right; -webkit-transition: all .5s ease; -moz-transition: all .5s ease; transition: all .5s ease; }
-.top .top-search:focus {width: 150px; padding-right: 18px}
+.top .cart form { position: relative; margin-top:10px; }
+.top .cart form button {
+  position: absolute;
+  top:4px;
+  right: -4px;
+  border:none;
+  background: none;
+  color: #000000;
+}
+.top form {
+  input#keywords {
+    margin-bottom:0;
+    margin-top:5px;
+    border-radius:0;
+    width: 146px;
+    float: right;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    transition: all .5s ease;
+    &:focus { width: 150px; padding-right: 18px }
+  }
+}
 .selectnav { display: block; width:90%; margin:0 auto 10px}
 .nav {margin-bottom:0}
 .nav-pills > li > a {border-radius: 0}
@@ -154,7 +172,7 @@ address .cdata {width:90%}
 .view p { font-family: Georgia, serif; font-style: italic; font-size: 12px; line-height: 1em; position: relative; color: black; padding: 20px 20px 10px; text-align: center; }
 .view button.info {border-top: 1px solid #000;border: none;line-height: 21px !important;}
 .view a.info, .view button.info { display: inline-block; text-decoration: none; padding: 3px 8px; background: #000; font-size: .7em; color: #fff; text-transform: uppercase; -webkit-box-shadow: 0 0 1px #000; -moz-box-shadow: 0 0 1px #000; box-shadow: 0 0 1px #000; }
-.view a.info: hover, .view button.info: hover { -webkit-box-shadow: 0 0 5px #000; -moz-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; }
+.view a.info:hover, .view button.info:hover { -webkit-box-shadow: 0 0 5px #000; -moz-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; }
 .view-thumb {position: relative;}
 .view-thumb .onsale {position:absolute; right:5px; bottom:5px; padding: 5px 15px; background: #D56452; color:white; z-index: 111}
 .view-thumb img { -webkit-transform: scaleY(1); -moz-transform: scaleY(1); -o-transform: scaleY(1); -ms-transform: scaleY(1); transform: scaleY(1); -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
@@ -271,7 +289,7 @@ p.stars span a { float: left; position: absolute; left: 0; top: 0; width: 16px; 
 p.stars span a:hover, p.stars span a:focus { background: url(../img/star.png) repeat-x left -16px; }
 p.stars span a.active { background: url(../img/star.png) repeat-x left -32px; }
 p.stars span a.star-1 { width: 16px; z-index: 10; }
-p.stars span a.star-2 { width: 32px; z-index: 9; } 
+p.stars span a.star-2 { width: 32px; z-index: 9; }
 p.stars span a.star-3 { width: 48px; z-index: 8; }
 p.stars span a.star-4 { width: 64px; z-index: 7; }
 p.stars span a.star-5 { width: 80px; z-index: 6; }
@@ -286,7 +304,7 @@ p.stars span a.star-5 { width: 80px; z-index: 6; }
 
 .page {padding-bottom: 30px}.page .contactform {margin-top: 20px}.page .contactform textarea {width:95%}
  .contacts {margin: 20px 0;border: 1px solid #DDD;padding-bottom: 0 !important;}
- 
+
 /* ============ */
 /* Blog section */
 /* ============ */
@@ -297,7 +315,7 @@ section.blog .bloglist {padding-top:30px}
 .blog article:first-child {padding-top:0}
 .blog article h4 {margin-top:0}
 .blog article:first-child, .blog .list article:first-child {border:0}
-.blog article h4 a {font-size: 16px; text-transform: uppercase} 
+.blog article h4 a {font-size: 16px; text-transform: uppercase}
 .blog small.date, .blog small.comments {font-style: italic}
 .blog small.date { padding:5px 5px 5px 0}
 .blog small.comments {padding:5px; }
@@ -315,7 +333,7 @@ section.blog .bloglist {padding-top:30px}
 .archive article:first-child {}
 .archive article h4 {margin-top:0}
 .blog .list article:first-child {border:0}
-.archive article h4 a {font-size: 16px; text-transform: uppercase} 
+.archive article h4 a {font-size: 16px; text-transform: uppercase}
 .archive small.date, .blog small.comments {font-style: italic}
 .archive small.date { padding:5px 5px 5px 0}
 .archive small.comments {padding:5px; }
@@ -331,7 +349,7 @@ section.blog .bloglist {padding-top:30px}
 .search article:first-child {padding-top:0}
 .search article h4 {margin-top:0}
 .search article:first-child, .blog .list article:first-child {border:0}
-.search article h4 a {font-size: 16px; text-transform: uppercase} 
+.search article h4 a {font-size: 16px; text-transform: uppercase}
 .search small.date, .blog small.comments {font-style: italic}
 .search small.date { padding:5px 5px 5px 0}
 .search small.comments {padding:5px; }
@@ -416,7 +434,7 @@ footer article {padding-top: 0 !important;border: none !important;}
 .ui-slider { position: relative; text-align: left; }
 .ui-slider .ui-slider-handle { position: absolute; z-index: 2; width: 0.9em; height: 0.9em; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; border: 1px solid rgba(0, 0, 0, 0.25); cursor: pointer; background: #e7e7e7; background: -webkit-gradient(linear,left top,left bottom,from(#FEFEFE),to(#e7e7e7)); background: -webkit-linear-gradient(#FEFEFE,#e7e7e7); background: -moz-linear-gradient(center top,#FEFEFE 0%,#e7e7e7 100%); background: -moz-gradient(center top,#FEFEFE 0%,#e7e7e7 100%); outline: none; top: -.3em; -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.65) inset; -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.65) inset; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.65) inset; }
 .ui-slider .ui-slider-handle:last-child { margin-left: -1em }
-.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background: none repeat scroll 0 0 #FF6B6B; box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset; -webkit-box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset; -moz-box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset -webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em; }
+.ui-slider .ui-slider-range { position: absolute; z-index: 1; font-size: .7em; display: block; border: 0; background: none repeat scroll 0 0 #FF6B6B; box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset; -webkit-box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset; -moz-box-shadow: 1px 1px 1px 0.5px rgba(0, 0, 0, 0.25) inset; -webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em; }
 .price_slider_wrapper .ui-widget-content { -webkit-border-radius: 1em; -moz-border-radius: 1em; border-radius: 1em; background: #1e1e1e; background: -webkit-gradient(linear,left top,left bottom,from(#1e1e1e),to(#6a6a6a)); background: -webkit-linear-gradient(#1e1e1e,#6a6a6a); background: -moz-linear-gradient(center top,#1e1e1e 0%,#6a6a6a 100%); background: -moz-gradient(center top,#1e1e1e 0%,#6a6a6a 100%); }
 .ui-slider-horizontal { height: .5em }
 .ui-slider-horizontal .ui-slider-range { top: 0; height: 100%; }
@@ -488,9 +506,9 @@ footer article {padding-top: 0 !important;border: none !important;}
 .flexslider a:focus  {outline: none;}
 .slides,
 .flex-control-nav,
-.flex-direction-nav {margin: 0; padding: 0; list-style: none; } 
+.flex-direction-nav {margin: 0; padding: 0; list-style: none; }
 
-/* FlexSlider Necessary Styles*/ 
+/* FlexSlider Necessary Styles*/
 
 .flexslider {margin: 0 auto; padding: 0;}
 section.single #flexcarousel-product li{text-align:left; min-width: 115px;}
@@ -499,14 +517,14 @@ section.single #flexcarousel-product li{text-align:left; min-width: 115px;}
 
 /* Clearfix for the .slides element */
 
-.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
-html[xmlns] .slides {display: block;} 
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
+html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 
 /* No JavaScript Fallback */
 /* If you are not using another script, such as Modernizr, make sure you
  * include js that eliminates this class on page load */
- 
+
 .no-js .slides > li:first-child {display: block;}
 
 /* FlexSlider Default Theme
@@ -632,12 +650,14 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
     .feat .row{margin-left: -15px;}
     .feat .row .span4 { width: 226px;}
 }
-@media (max-width: 767px) { 
+@media (max-width: 767px) {
     .homepagecontainer {background: #fff;}
 	.top div[class*='span'] {text-align: center !important; width:100% !important}
 	.top .searchcart .wrap {padding:15px 0}
 	.top .top-search {float:none !important}
-	.top .cart form button {top: 4px !important; right: 18px !important;}
+	.top .cart form {
+	  input[type='submit'], button {top: 4px !important; right: 18px !important;}
+  }
 	.top .searchcart form button {top:2px; right:20px}
 	.top .top-search, .top .top-search:focus {width: 90%; margin: 0 auto; border-radius: 0; -webkit-appearance: none;}
 	.top form {margin-bottom: 0px; margin-top:20px; text-align: center}
@@ -649,7 +669,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	section.product article, section.single .span3{margin: 0 0 10px;}
 	section.single .flex-control-nav {display: block !important}
 	section.single .related .itembox, section.single .upsells .itembox {width:100%}
-	
+
 	.coupon, .goco {text-align: center;}
 	.coupon .btn {margin-top: 5px}
 	.goco {margin-top:15px}
@@ -685,3 +705,4 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	.js .selectnav { display: block; font-size:0.9em}
 	.flex-caption {display: none}
 }
+

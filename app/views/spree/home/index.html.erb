@@ -1,0 +1,125 @@
+<div class="homepagecontainer">
+	<div class="slides home-span12">
+	  <div class="container">
+		  <div id="flexslider" class="flexslider row">
+		    <ul class="slides span12">
+
+		      <!-- Sample slider with text caption -->
+		      <li>
+		       <img src="assets/store/banner/banner-width1.jpg" alt="" />
+		        <p class="flex-caption">
+			        <strong>CAPTION</strong><br />
+			        Put any caption, description or anything here.<br /><br />
+			        <a href="#" class="btn theme">$69 | BUY IT</a>
+		        </p>
+		      </li>
+
+		      <!-- Sample slider wrapped with link -->
+		      <li><a href="#"><img src="assets/store/banner/banner-width2.jpg" alt="" /></a></li>
+
+		      <!-- Sample normal slider -->
+		      <li><img src="assets/store/banner/banner-width4.jpg" alt="" /></li>
+
+		    </ul>
+		  </div>
+	  </div>
+	</div>
+	<div class="clearfix"></div>
+	<!-- =================== -->
+	<!-- Promo Banner Option -->
+	<!-- =================== -->
+  <section class="home-panel promo">
+	  <div class="container" style="display:block">
+			  <div class="row-fluid">
+				  <article class="span4"><a href="#"><img src="assets/store/banner/samplepromo.jpg" alt="" /></a></article>
+				  <article class="span4"><a href="#"><img src="assets/store/banner/samplepromo.jpg" alt="" /></a></article>
+				  <article class="span4"><a href="#"><img src="assets/store/banner/samplepromo.jpg" alt="" /></a></article>
+			  </div>
+	  </div>
+	</section>
+
+	<div class="container home">
+
+		<!-- ================ -->
+		<!-- Featured section -->
+		<!-- ================ -->
+		<section class="feat">
+
+			<div class="row">
+				<div class="span12">
+
+					<h6 class="subhead theme"><strong>FEATURED ITEMS</strong></h6>
+
+					<div class="tab-content row">
+
+					  <!-- Feat tab -->
+					  <div class="tab-pane active" id="feat">
+		 	  	  	<article class="span4">
+							  <div class="view view-thumb">
+								  <img src="assets/store/products/1.jpg" alt="" />
+								  <div class="mask">
+                    <p>Product description Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <a href="product.html" class="info">View</a>
+                    <a href="checkout.html" class="info">Buy</a>
+  							  </div>
+							  </div>
+							  <h2>$69</h2>
+							  <p><a href="#">Sample Featured Product</a></p>
+						  </article>
+						  <article class="span4">
+							  <div class="view view-thumb">
+    							<img src="assets/store/products/2.jpg" alt="" />
+								  <div class="mask">
+                    <p>Product description Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <a href="product.html" class="info">View</a> <a href="checkout.html" class="info">Buy</a>
+								  </div>
+							  </div>
+							  <h2>$69</h2>
+							  <p><a href="#">Sample Featured Product</a></p>
+						  </article>
+						  <article class="span4">
+							  <div class="view view-thumb">
+								  <img src="assets/store/products/4.jpg" alt="" />
+								  <div class="mask">
+                    <p>Product description Vestibulum ante ipsum primis in faucibus orci luctus.</p>
+                    <a href="product.html" class="info">View</a> <a href="checkout.html" class="info">Buy</a>
+								  </div>
+							  </div>
+							  <h2>$69</h2>
+							  <p><a href="#">Sample Featured Product</a></p>
+						  </article>
+					  </div>
+					</div> <!-- End tab-content -->
+				</div>
+			</div>
+
+
+			<!-- ====== -->
+			<!-- Brands -->
+			<!-- ====== -->
+
+			<h6 class="subhead theme brands"><strong>DESIGNER BRANDS</strong></h6>
+
+			<div class="tab-brand">
+				<div id="flexcarousel-brands" class="flexslider">
+				  <ul class="slides">
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				    <li><img src="http://placehold.it/140x100" alt="" /></li>
+				  </ul>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+
+<div data-hook="homepage_products">
+  <%= render :partial => 'spree/shared/products', :locals => { :products => @products } %>
+</div>
+
