@@ -7,13 +7,9 @@
 		<section class="row foot">
 			<article class="span3">
 				<strong>Quick Links</strong>
-				<ul>
-					<li><a href="#">About Us</a></li>
-					<li><a href="#">Privacy</a></li>
-					<li><a href="#">Returns Policies</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Feedback</a></li>
-					<li><a href="#">Contact Us</a></li>
+  			<ul>
+				  <%= render :partial => "spree/static_content/static_content_list", :collection => Spree::Page.visible.footer_links, :as => :page %>
+					<li><%= link_to "Contact Us", spree.contact_path %></li>
 				</ul>
 			</article>
 			<article class="span3">
@@ -38,25 +34,19 @@
 				</div>
 				<address class="row-fluid">
 					<div class="pull-left clabel"><i class="icon-location"></i></div>
-					<div class="pull-left cdata">1234 Street City, ST 73243 California</div>
+					<div class="pull-left cdata">5601 W. Jackson St, Muncie, IN 47303</div>
 				</address>
 				<address class="row-fluid">
 					<div class="pull-left clabel"><i class="icon-phone"></i></div>
-					<div class="pull-left cdata">888-555-1234</div>
+					<div class="pull-left cdata">(765) 282-1004</div>
 				</address>
-				<address class="row-fluid">
-					<div class="pull-left clabel"><i class="icon-mail"></i></div>
-					<div class="pull-left cdata"><a href="#">hello@Serenity.com</a></div>
-				</address>
-
 			</article>
 		</section>
 
 	</div>
 	<section class="row-fluid doubleline">
-			<div class="container">
+		<div class="container">
 			<div class="span6">
-
 				<div class="payment amex"></div>
 				<div class="payment mastercard"></div>
 				<div class="payment visa"></div>
@@ -78,27 +68,19 @@
 				<div class="payment westernunion"></div>
 				-->
 			</div>
-			<div class="span6 currency">
-				<a href="#" class="active">USD</a> <a href="#">GBP</a> <a href="#">MYR</a> <a href="#">AUD</a>
-			</div>
-			</div>
-		</section>
+		</div>
+	</section>
 
-		<section class="row-fluid social">
-			<div class="container">
-			<div class="pull-left">&copy; 2012 Serenity</div>
-			<div class="pull-right">
-				<ul>
-					<li><a href="#"><i class="icon-facebook"></i></a></li>
-					<li><a href="#"><i class="icon-twitter"></i></a></li>
-					<li><a href="#"><i class="icon-gplus"></i></a></li>
-					<li><a href="#"><i class="icon-pinterest"></i></a></li>
-					<li><a href="#"><i class="icon-tumblr"></i></a></li>
-					<li><a href="#"><i class="icon-instagrem"></i></a></li>
-				</ul>
-			</div>
-			</div>
-		</section>
-
+	<section class="row-fluid social">
+		<div class="container">
+		<div class="pull-left">&copy; 2012 Serenity</div>
+		<div class="pull-right">
+			<ul>
+				<li><a href="#"><i class="icon-facebook"></i></a></li>
+				<li><a href="#"><i class="icon-twitter"></i></a></li>
+			</ul>
+		</div>
+		</div>
+	</section>
 </footer>
 
