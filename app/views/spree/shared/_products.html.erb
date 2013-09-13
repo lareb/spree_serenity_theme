@@ -1,0 +1,38 @@
+<%
+  paginated_products = @searcher.retrieve_products if params.key?(:keywords)
+  paginated_products ||= products
+%>
+
+<div id="products" class="inline product-listing" data-hook>
+<% if products.empty? %>
+  <p><%= Spree.t(:no_products_found) %></p>
+<% elsif params.key?(:keywords) %>
+  <header class="span12 prime">
+    <h3 class="search-results-title"><%= Spree.t(:search_results, :keywords => h(params[:keywords])) %></h3>
+  </header>
+<% end %>
+  <% if products.any? %>
+    <% products.each do |product| %>
+      <article id="product_<%= product.id %>" class="<%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
+        <div class="view view-thumb">
+          <%= link_to large_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
+          <div class="mask">
+            <p><%= truncate(product.description, :length => 100) %></p>
+            <%= link_to "View", product, :class => 'info', :itemprop => "description", :title => product.name %>
+            <a href="checkout.html" class="info">Buy</a>
+          </div>
+        </div>
+        <h2 class="price selling" itemprop="price"><%= display_price(product) %></h2>
+        <p class="product-title"><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></p>
+      </article>
+    <% end %>
+    <% reset_cycle("classes") %>
+  <% end %>
+</div>
+
+<% if paginated_products.respond_to?(:num_pages) %>
+  <div class="text-center" style="clear:both">
+    <%= paginate paginated_products, :theme => 'twitter-bootstrap', :pagination_class => "pagination-centered" %>
+  </div>
+<% end %>
+

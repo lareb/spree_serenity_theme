@@ -18,7 +18,7 @@ a {color:black}
 button.theme, .share a, .share a:hover, .horizontal-nav li a:hover, .btn.theme, .btn-theme, .product_list_widget .amount {color:white}
 footer {color: #777}
 footer a {color: #CCC}
-a:hover, footer a:hover, footer a.active, aside a, em.on, .theme, .page h5, a.theme , .product #sidebar h5, #comments strong {color: #E55137}
+a:hover, footer a:hover, footer a.active, aside a, em.on, .theme, .page h5, a.theme , nav.sidebar-item h5, #comments strong {color: #E55137}
 /* ================= */
 /* Background colors */
 /* ================= */
@@ -29,14 +29,14 @@ body { }
 .header-container {background: #FFF; height: 100%; width: 100%;}
 .container-menu {width: 100%;background: #F5F5F5;border-top: 1px solid #DDD;height: 40px;border-bottom: 1px solid #DDD;}
 .feat .nav-pills > .active > a, .feat .nav-pills > .active > a:hover, .product .nav-pills > .active > a, .product .nav-pills > .active > a:hover, button.theme, .share a, .flex-control-paging li a.flex-active, .btn.theme, .btn-theme {background:#E55137}
-#sidebar .tagcloud a, .comments article:hover {background: #f2f2f2}
+.sidebar .tagcloud a, .comments article:hover {background: #f2f2f2}
 /* ============= */
 /* Border colors */
 /* ============= */
 .promo img {border: 1px solid #ddd}
 .promo img:hover {border: 1px solid #333}
-.blog article, .archive article, .search article, .line, hr, .product #sidebar li {}
-.product .tab-content.sideline {border-left: 1px solid #ddd}
+.blog article, .archive article, .search article, .line, hr, .product .sidebar li {}
+.tab-content.sideline {border-left: 1px solid #ddd}
 header.prime,  .gmap  {border-bottom: 1px solid #ddd}
 /*  ========== */
 /* Font family */
@@ -193,8 +193,7 @@ address .cdata {width:90%}
 /* Hover effect */
 /* ============ */
 .view { max-width: 320px; overflow: hidden; position: relative; text-align: center; cursor: default; background: #fff; }
-.view .mask,
-.view .content { height: 100%; position: absolute; overflow: hidden; top: 0; left: 0; }
+.view .mask, .view .content { height: 100%; position: absolute; overflow: hidden; top: 0; left: 0; }
 .view img { display: block; position: relative; }
 .view h2 { text-transform: uppercase; color: #fff; text-align: center; position: relative; font-size: 1em; line-height: 1em; padding:20px 0 0 0; background: rgba(0, 0, 0, 0.8); margin: 20px 0 0 0; }
 .view p { font-family: Georgia, serif; font-style: italic; font-size: 12px; line-height: 1em; position: relative; color: black; padding: 20px 20px 10px; text-align: center; }
@@ -230,37 +229,48 @@ header.prime .catmeta {font-size: .85em; text-transform: uppercase; letter-spaci
 /* ================ */
 /* Products section */
 /* ================ */
-section.product article p, .feat article p, .single article p, .product .tab-content.sideline article p, section.single .products .product p, section.product article p {position:relative; background: #000; color: #fff; padding: 10px; max-width: 300px;font-size: 1em; margin: 0 auto!important;}
-section.product article p a.feat article p a, .single article p a, .product .tab-content.sideline article p a, section.product article p a, section.single .products .product p a, section.feat article p a{color: #fff !important;}
-section.product article h2, section.single  .products .product h2, .feat article h2, .product .tab-content.sideline article h2, .single article h2{position: relative;background: #D56452;color: #fff;line-height: 20px;margin: 0 auto;max-width: 300px;padding: 10px;font-size: 1em;}
+#products article p, .feat article p, .single article p, .product .tab-content.sideline article p, section.single .products .product p, #products article p {position:relative; background: #000; color: #fff; padding: 10px; max-width: 300px;font-size: 1em; margin: 0 auto!important;}
+#products article p a.feat article p a, .single article p a, .product .tab-content.sideline article p a, #products article p a, section.single .products .product p a, section.feat article p a{color: #fff !important;}
+#products article h2, section.single  .products .product h2, .feat article h2, .product .tab-content.sideline article h2, .single article h2{position: relative;background: #D56452;color: #fff;line-height: 20px;margin: 0 auto;max-width: 300px;padding: 10px;font-size: 1em;}
 body.home .products {margin-bottom: 25px}
-section.product .itembox {width:300px}
-section.product {text-align: center}
-section.product .nav {padding:20px 0 0}
-section.product article {background: #FFF;margin:0 0px 18px 18px;text-align: center;}
-section.product article a:hover {text-decoration: none}
-section.product .tab-content {padding:50px 0 30px}
-section.product .tab-content.sideline {margin: 0 0 30px; padding:0}
-section.product .tab-content.sideline article {width: 29.7%; float:left}
-section.product .tab-content .wrap {margin-bottom:30px}
-section.product .overlay {padding-top:15px}
-section.product .query {display: none}
-section.product .query li {float: none; display: inline-block; zoom:1}
-section.product #myTab {padding-bottom: 20px}
-section.product .view {margin: 0}
-section.product .sidebar {padding-left:20px}
-section.product .sidebar li {padding:5px 0}
-section.product .sidebar li:hover {padding-left: 5px}
-section.product .sidebar li:first-child {border-top: none}
-section.product .sidebar li li {padding-left: 10px; font-size: .9em}
-section.product .sidebar, section.product .sidebar article {text-align: left}
-section.product .sidebar section {margin-bottom: 50px}
+#products .itembox {width:300px}
+#products {text-align: center}
+#products .nav {padding:20px 0 0}
+#products article {background: #FFF;margin:0 0px 18px 18px;text-align: center;}
+#products article a:hover {text-decoration: none}
+.tab-content #products {
+  padding:50px 0 30px;
+  .wrap {margin-bottom:30px}
+}
+.tab-content.sideline #products {
+  margin: 0 0 30px; padding:0;
+  article {width: 29.7%; float:left}
+}
+#products .overlay {padding-top:15px}
+#products .query {display: none}
+#products .query li {float: none; display: inline-block; zoom:1}
+#products #myTab {padding-bottom: 20px}
+#products .view {margin: 0}
+.sidebar {
+  text-align: left;
+  li {
+    padding:5px 0;
+    &:hover {padding-left: 5px;}
+    &:first-child {border-top: none}
+    li {padding-left: 10px; font-size: .9em}
+  }
+  section {margin-bottom: 50px}
+  .navigation {
+    padding: 0px;
+    li:hover { padding-left: 0px; }
+  }
+}
 section.page .products article {position: relative;background: #FFF;text-align: center;width: 270px;margin: 10px;}
-section.product .sidebar section article {margin-bottom: 10px}
-section.product .sidebar .thumb {width:30%; float: left; padding-right: 5%}
-section.product .sidebar .info {width: 65%; float:left; font-size: .9em; padding-top: 5px}
-section.product article { padding-top:0}
-section.product li.product-cat {margin:0 5px}
+#products .sidebar section article {margin-bottom: 10px}
+#products .sidebar .thumb {width:30%; float: left; padding-right: 5%}
+#products .sidebar .info {width: 65%; float:left; font-size: .9em; padding-top: 5px}
+#products article { padding-top:0}
+#products li.product-cat {margin:0 5px}
 .accordion-heading {
 background: #FFF;
 border-bottom: 0;
@@ -388,11 +398,23 @@ section.blog .bloglist {padding-top:30px}
 /* Sidebar section */
 /* =============== */
 
-.sidebar aside {margin-bottom:40px; padding-right:20px}
-.sidebar aside .title {text-transform: uppercase; font-weight: 700}
-.sidebar ul {margin:0}
-.sidebar ul {list-style: none}
-.sidebar .tagcloud a {float:left; padding:5px 8px; margin:0 5px 5px 0}
+.sidebar {
+  h6 {
+    font-size: 14px;
+    color: #E55137;
+  }
+  a {color: black;}
+  aside {
+    margin-bottom:40px;
+    padding-right:20px;
+    .title {text-transform: uppercase; font-weight: 700}
+  }
+  ul {
+    margin:0;
+    list-style: none;
+  }
+  .tagcloud a {float:left; padding:5px 8px; margin:0 5px 5px 0}
+}
 
 /* =============== */
 /* Comment section */
@@ -690,11 +712,11 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	.top .top-search, .top .top-search:focus {width: 90%; margin: 0 auto; border-radius: 0; -webkit-appearance: none;}
 	.top form {margin-bottom: 0px; margin-top:20px; text-align: center}
 	.promo article {margin:15px auto !important}
-	section.feat .view, section.product .view, section.single .view {margin: 0px auto;}
+	section.feat .view, #products .view, section.single .view {margin: 0px auto;}
 	.product .sidebar .info {width: 100%}
 	.product .tab-content.sideline  {border: none !important; }
 	.product .tab-content.sideline article {width: 100% !important; }
-	section.product article, section.single .span3{margin: 0 0 10px;}
+	#products article, section.single .span3{margin: 0 0 10px;}
 	section.single .flex-control-nav {display: block !important}
 	section.single .related .itembox, section.single .upsells .itembox {width:100%}
 
@@ -732,5 +754,30 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	#nav { display: none !important}
 	.js .selectnav { display: block; font-size:0.9em}
 	.flex-caption {display: none}
+}
+
+h1.taxon-title {
+  text-align:center;
+  font-size: 24.5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 12px;
+}
+#breadcrumbs ul {
+  margin-left: 0px;
+  li {
+    float:left;
+    list-style: none;
+    position: relative;
+  }
+  font-size: 85%;
+  color: #555;
+}
+li.nowrap {
+  label { display: inline; }
+  input { margin-top: -2px; }
+}
+#sidebar_products_search div.navigation {
+  border-bottom: none;
 }
 

@@ -167,5 +167,7 @@ $(function(){
 	navWidth();
 	thumbHover();
 
+  $("#sidebar ul.taxons-list li a").prepend("<i class='icon-right-open'> ");
+
 });
 

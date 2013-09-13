@@ -12,15 +12,17 @@
 
       <div id="wrapper" class="container" data-hook>
 
-        <%= breadcrumbs(@taxon) %>
-
         <div class='row-fluid'>
-          <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
-
-          <div id="content" class="span<%= !content_for?(:sidebar) ? "12" : "8" %>" data-hook>
+          <% if content_for? :sidebar %>
+            <div class="span3">
+              <%= breadcrumbs(@taxon) %>
+              <%= render :partial => 'spree/shared/sidebar' %>
+            </div>
+          <%end%>
+          <%= content_tag :div, :id => "content", :class => (content_for?(:sidebar) ? "span9 tab-content sideline" : "span12"), :"data-hook" => "" do%>
             <%= flash_messages %>
             <%= yield %>
-          </div>
+          <%end%>
         </div>
       </div>
 
