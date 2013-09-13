@@ -322,17 +322,17 @@ section.single .details {text-align: left;padding: 20px;background: #F5F5F5;bord
 /* Star Rating */
 /* =========== */
 
-p.stars span { width: 80px; height: 16px; position: relative; float: left; background: url(../img/star.png) repeat-x left 0;}
+p.stars span { width: 80px; height: 16px; position: relative; float: left; background: url(star.png) repeat-x left 0;}
 p.stars span a { float: left; position: absolute; left: 0; top: 0; width: 16px; height: 0; padding-top: 16px; overflow: hidden; }
-p.stars span a:hover, p.stars span a:focus { background: url(../img/star.png) repeat-x left -16px; }
-p.stars span a.active { background: url(../img/star.png) repeat-x left -32px; }
+p.stars span a:hover, p.stars span a:focus { background: url(star.png) repeat-x left -16px; }
+p.stars span a.active { background: url(star.png) repeat-x left -32px; }
 p.stars span a.star-1 { width: 16px; z-index: 10; }
 p.stars span a.star-2 { width: 32px; z-index: 9; }
 p.stars span a.star-3 { width: 48px; z-index: 8; }
 p.stars span a.star-4 { width: 64px; z-index: 7; }
 p.stars span a.star-5 { width: 80px; z-index: 6; }
-.star-rating { float: right; width: 80px; height: 16px; background: url(../img/star.png) repeat-x left 0; margin-top:10px}
-.star-rating span { background: url(../img/star.png) repeat-x left -32px; height: 0; padding-top: 16px; overflow: hidden; float: left; }
+.star-rating { float: right; width: 80px; height: 16px; background: url(star.png) repeat-x left 0; margin-top:10px}
+.star-rating span { background: url(star.png) repeat-x left -32px; height: 0; padding-top: 16px; overflow: hidden; float: left; }
 #review_form h3 {font-size: 1em; line-height: 1.2em}
 .comment-form-rating .stars {float:right; margin-top:-20px}
 
@@ -580,7 +580,7 @@ html[xmlns] .slides {display: block;}
 /* FlexSlider Default Theme
 *********************************/
 
-.home-span12{ width: 100%;height: auto; overflow: hidden; padding: 20px 0; background: url(../img/background/textured_stripes.png) repeat;}
+.home-span12{ width: 100%;height: auto; overflow: hidden; padding: 20px 0; background: url(background/textured_stripes.png) repeat;}
 .carousel-option{}
 .flexslider {position: relative;max-width: 940px;zoom: 1;}
 .flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
@@ -594,7 +594,7 @@ html[xmlns] .slides {display: block;}
 
 /* Direction Nav */
 
-.flex-direction-nav a {width: 30px; height: 30px; margin: -20px 0 0; display: block; background: url(../img/bg_direction_nav.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;
+.flex-direction-nav a {width: 30px; height: 30px; margin: -20px 0 0; display: block; background: url(bg_direction_nav.png) no-repeat 0 0; position: absolute; top: 50%; cursor: pointer; text-indent: -9999px; opacity: 0; -webkit-transition: all .3s ease;
 -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 filter: alpha(opacity=0);
 -khtml-opacity: 0;
@@ -642,7 +642,7 @@ filter: alpha(opacity=70);
 /* Payment method */
 /* ============== */
 
-.payment { background: url(../img/payment.png) no-repeat; float: left; padding-right: 5px; }
+.payment { background: url(payment.png) no-repeat; float: left; padding-right: 5px; }
 .payment:hover {opacity: 1}
 .twocheckout { width: 38px; height: 24px; background-position: -49px -140px; }
 .amex { width: 38px; height: 24px; background-position: -0px -140px; }
