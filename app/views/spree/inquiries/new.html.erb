@@ -1,0 +1,80 @@
+<%= content_for :head, javascript_include_tag("http://maps.googleapis.com/maps/api/js?sensor=false") %>
+<%= render 'spree/shared/error_messages', :target => @inquiry %>
+<div id="contact_form" class="contacts">
+	<div class="row">
+		<div class="span12">
+			<!-- Replace data-center with your address -->
+			<div class="gmap" id="map" data-center="5601 W Jackson St, 47304" data-zoom="15"></div>
+		</div>
+	</div>
+
+	<div class="row address">
+	  <div class="span4">
+		  <div class="wrap contactform">
+			  <address class="row-fluid">
+				  <div class="pull-left clabel"><i class="icon-location"></i></div>
+				  <div class="pull-left cdata">5601 West Jackson Street<br/>Muncie, IN 47304</div>
+			  </address>
+			  <address class="row-fluid">
+				  <div class="pull-left clabel"><i class="icon-phone"></i></div>
+				  <div class="pull-left cdata">765-282-1004</div>
+			  </address>
+			  <address class="row-fluid">
+				  <div class="pull-left clabel"><i class="icon-mail"></i></div>
+				  <div class="pull-left cdata"><a href="#">info@awcoffees.com</a></div>
+			  </address>
+		  </div>
+	  </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <%= form_for(@inquiry, :html => {:class => "wrap contactform"}) do |f| %>
+  			<div class="row-fluid">
+          <div class="span4">
+            <%= f.label :name, Spree.t(:contact_name) %>
+            <%= f.text_field :name %>
+          </div>
+          <div class="span4">
+            <%= f.label :email, Spree.t(:contact_email) %>
+            <%= f.text_field :email %>
+          </div>
+          <div class="span4">
+            <%= f.label :phone_number, Spree.t(:contact_phone_number) %>
+            <%= f.text_field :phone_number %>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span4">
+            <%= f.label :inquiry_type, Spree.t(:inquiry_type) %>
+            <%= f.select :inquiry_type, options_for_select(inquiry_types_translated) %>
+          </div>
+          <div class="span4">
+            <%= f.label :order_no, Spree.t(:inquiry_order_no) %>
+            <%= f.text_field :order_no %>
+          </div>
+        </div>
+        <div class="row-fluid">
+          <div class="span12">
+            <%= f.label :message, Spree.t(:inquiry_message) %>
+            <%= f.text_area :message, {:rows => 5} %>
+          </div>
+          <% if Spree::ContactUsConfiguration[:use_captcha] && Spree::ContactUsConfiguration[:recaptcha_public_key] %>
+            <%= recaptcha_tags(
+                  :public_key => Spree::ContactUsConfiguration[:recaptcha_public_key],
+                  :display    => {:theme => Spree::ContactUsConfiguration[:recaptcha_theme]}
+                )
+            %>
+          <% end %>
+          <% if Spree::ContactUsConfiguration[:use_honeypot] %>
+              <div class="inquiry_honey">
+                  <%= Spree.t('honeypot.please_leave_blank') %><input name="honey" value="" />
+              </div>
+          <% end %>
+          <%= f.hidden_field :client_viewport_size %>
+          <p><%= f.submit Spree.t(:send_inquiry), :class => "btn" %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

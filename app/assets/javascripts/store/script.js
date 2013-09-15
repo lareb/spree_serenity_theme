@@ -124,19 +124,19 @@ function thumbHover(){
 	}
 }
 
-// ==========
-// Google Map
-// ==========
-
-if ($('#map').hasClass('gmap')) {
-	$('.gmap').mobileGmap();
-}
 
 // ============
 // Initial load
 // ============
 
 $(function(){
+  // ==========
+  // Google Map
+  // ==========
+
+  if ($('#map').hasClass('gmap')) {
+	  $('.gmap').mobileGmap();
+  }
 
 	// Cart bubble
 	$('.counter a').on('click', function(){
@@ -169,5 +169,10 @@ $(function(){
 
   $(".sidebar ul.taxons-list li a").prepend("<i class='icon-right-open'> ");
 
+  // Fix issue with hidden div being first in form, causing bootstrap classes not to line up right.  Move it to end.
+  var hidden_div = $("form input[name=authenticity_token]").parent();
+  hidden_div.each(function() {
+    $(this).appendTo($(this).parent());
+  });
 });
 
