@@ -91,7 +91,16 @@ embed {max-width:100%;}
 .welcome a {color:#fff}
 .welcome .greet, .welcome .hscart {width: 46%; padding: 1% 0;text-transform: uppercase; position: relative}
 .counter {min-width: 139px;width: 120px;padding: 10px;color: #fff;background: #D56452;float: right;}
-.welcome .cartbubble {position: absolute; width: 159px; top:40px; text-align: left; z-index: 1; -webkit-backface-visibility: hidden; display: none}
+.welcome .cartbubble {
+  position: absolute;
+  width: 239px;
+  top:40px;
+  text-align: left;
+  z-index: 1;
+  -webkit-backface-visibility: hidden;
+  display: none;
+  margin-left: -40px;
+}
 .welcome .cartbubble hr {margin:10px 0; border-top:1px solid #999; border-bottom: 1px solid black}
 .welcome .cartbubble a {color: #fff;}
 .standard header {text-align: center; padding:20px 0}
@@ -633,11 +642,38 @@ filter: alpha(opacity=70);
 /* Bubble Cart */
 /* =========== */
 
-.arrow-box {position: relative; background: #111111; border: 1px solid #555555; padding: 5px; font-size: .85em; text-transform: uppercase }
-.arrow-box:after, .arrow-box:before { bottom: 100%; border: solid transparent; content: " "; height: 0; width: 0; position: absolute; pointer-events: none; }
-.arrow-box:after { border-color: rgba(17, 17, 17, 0); border-bottom-color: #111; border-width: 10px; left: 50%; margin-left: -10px; }
-.arrow-box:before { border-color: rgba(85, 85, 85, 0); border-bottom-color: #555555; border-width: 11px; left: 50%; margin-left: -11px;}
-.arrow-box .pull-left { width: 75%; font-size: .85em}
+.arrow-box {
+  position: relative;
+  background: #111111;
+  border: 1px solid #555555;
+  padding: 5px;
+  font-size: .85em;
+  text-transform: uppercase;
+  &:after, :before {
+    bottom: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(17, 17, 17, 0);
+    border-bottom-color: #111;
+    border-width: 10px;
+    left: 50%;
+    margin-left: -10px;
+  }
+  &:before {
+    border-color: rgba(85, 85, 85, 0);
+    border-bottom-color: #555555;
+    border-width: 11px;
+    left: 50%;
+    margin-left: -11px;
+  }
+  .pull-left { width: 75%; font-size: .85em}
+}
 
 /* ============== */
 /* Payment method */
@@ -782,4 +818,5 @@ li.nowrap {
 #sidebar_products_search div.navigation {
   border-bottom: none;
 }
+section.staticcontent .sideline { padding-left: 15px; }
 

@@ -1,0 +1,40 @@
+<div id="minicart" class="cartbubble">
+  <div class="arrow-box">
+  <% @body_id = 'cart' %>
+
+  <% if current_order.nil? || current_order.line_items.empty? %>
+
+    <div data-hook="empty_minicart">
+      <p><%= Spree.t(:your_cart_is_empty) %></p>
+      <p><%= link_to Spree.t(:continue_shopping), products_path, :class => 'button continue' %></p>
+    </div>
+
+  <% else %>
+    <div data-hook="outside_minicart_form">
+      <%= form_for current_order, :url => update_cart_path, :html => {:id => 'update-minicart'}, :remote => true do |order_form| %>
+        <div data-hook="inside_minicart_form">
+          <div data-hook="minicart_items" class="clearfix minicart-items">
+            <%= render :partial => 'spree/shared/error_messages', :locals => { :target => @order } %>
+            <%= order_form.fields_for :line_items do |item_form| %>
+              <ul id="minicart-items">
+              <%= render :partial => 'spree/shared/minicart_line_items', :locals => { :variant => item_form.object.variant, :line_item => item_form.object, :item_form => item_form } if item_form.object.variant %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+      <hr/>
+      <div id="minicart-details" data-hook="minicart_details" class="clearfix">
+          <%= Spree.t(:subtotal) %> <span class="order-total theme pull-right"><%= current_order.display_item_total %></span>
+      </div>
+      <hr/>
+      <div class="clearfix">
+          <%= link_to Spree.t('view_shopping_cart'), cart_path, :class => 'cart' %>
+          <%= link_to Spree.t(:checkout), checkout_path, :class => 'btn theme btn-mini pull-right', :id => 'checkout-link' %>
+      </div>
+
+    </div>
+  <% end %>
+  </div>
+</div>
+
