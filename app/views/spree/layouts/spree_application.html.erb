@@ -8,10 +8,10 @@
     <%= render :partial => 'spree/shared/head' %>
   </head>
   <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
-      <%= render :partial => 'spree/shared/header' %>
+    <%= render :partial => 'spree/shared/header' %>
 
-      <div id="wrapper" class="container" data-hook>
-
+    <div id="wrapper" class="container" data-hook>
+      <%= content_tag :section, :class => controller_name.classify.downcase do %>
         <div class='row'>
           <% if content_for? :sidebar %>
             <div class="span3">
@@ -19,14 +19,19 @@
               <%= render :partial => 'spree/shared/sidebar' %>
             </div>
           <%end%>
-          <%= content_tag :div, :id => "content", :class => (content_for?(:sidebar) ? "span9 tab-content sideline" : "span12"), :"data-hook" => "" do%>
-            <%= flash_messages %>
-            <%= yield %>
+          <%= content_tag :div, :id => "content", :class => content_for?(:sidebar) ? "span9" : "span12", :"data-hook" => "" do%>
+            <div class="row-fluid">
+              <%= content_tag :div, :class => (content_for?(:sidebar) ? "tab-content sideline" : "") do %>
+                <%= flash_messages %>
+                <%= yield %>
+              <%end%>
+            </div>
           <%end%>
         </div>
-      </div>
+      <%end%>
+    </div>
 
-      <%= render :partial => 'spree/shared/footer' %>
+    <%= render :partial => 'spree/shared/footer' %>
 
     <%= render :partial => 'spree/shared/google_analytics' %>
     <script>

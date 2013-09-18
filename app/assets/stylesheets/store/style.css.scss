@@ -36,7 +36,9 @@ body { }
 .promo img {border: 1px solid #ddd}
 .promo img:hover {border: 1px solid #333}
 .blog article, .archive article, .search article, .line, hr, .product .sidebar li {}
-.tab-content.sideline {border-left: 1px solid #ddd}
+.tab-content.sideline {
+  border-left: 1px solid #ddd;
+}
 header.prime,  .gmap  {border-bottom: 1px solid #ddd}
 /*  ========== */
 /* Font family */
@@ -141,7 +143,7 @@ embed {max-width:100%;}
 .home-panel {
   text-align: center;
   margin:0 auto 20px;
-  padding: 20px 20px 20px 0;
+  padding: 20px;
   border: 1px solid #DDD;
   background: #FFF;
   border-left: none;
@@ -168,12 +170,9 @@ address .cdata {width:90%}
 /* ================ */
 /* Featured section */
 /* ================ */
-.feat .span12{width: 952px; }
-.feat .row{margin-left: -4px;}
-.feat .row .span4{
-  margin: 10px 10px 10px 10px;
-  width: 31%;
-}
+.feat .span12{ width: 952px; }
+.feat .row{ margin-left: -15px; }
+.feat .row .span4{ margin: 10px; }
 .feat .headline, .feat .tab-content {padding: 30px 0}
 .feat article {position: relative;background: #FFF;margin: 10px;font-size: 1em;}
 .feat .tab-content .wrap {margin-bottom:30px}
@@ -737,6 +736,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
     .feat .row{margin-left: 0;}
 	.feat .row .span4 { width: 97%;}
 	.carousel-option{display:none;}
+
 }
 @media (max-width: 600px) {
 	#nav { display: none !important}

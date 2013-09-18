@@ -1,14 +1,14 @@
 <%= content_for :head, javascript_include_tag("http://maps.googleapis.com/maps/api/js?sensor=false") %>
 <%= render 'spree/shared/error_messages', :target => @inquiry %>
 <div id="contact_form" class="contacts">
-	<div class="row">
+	<div class="row-fluid">
 		<div class="span12">
 			<!-- Replace data-center with your address -->
 			<div class="gmap" id="map" data-center="5601 W Jackson St, 47304" data-zoom="15"></div>
 		</div>
 	</div>
 
-	<div class="row address">
+	<div class="row-fluid address">
 	  <div class="span4">
 		  <div class="wrap contactform">
 			  <address class="row-fluid">
@@ -26,7 +26,7 @@
 		  </div>
 	  </div>
   </div>
-  <div class="row">
+  <div class="row-fluid">
     <div class="span12">
       <%= form_for(@inquiry, :html => {:class => "wrap contactform"}) do |f| %>
   			<div class="row-fluid">
