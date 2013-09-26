@@ -174,5 +174,9 @@ $(function(){
   hidden_div.each(function() {
     $(this).appendTo($(this).parent());
   });
+
+  $("button, input[type=submit]").addClass("btn");
+  $("div.flash.alert, div.errorExplanation").addClass("alert alert-error");
+  $("div.flash.notice").addClass("alert alert-success");
 });
 

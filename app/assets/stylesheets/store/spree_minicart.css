@@ -64,7 +64,7 @@ ul#minicart-items {
   text-transform: lowercase;
 }
 #minicart form { margin-bottom: 0px; }
-#checkout-link { margin-top: -4px; }
+#minicart #checkout-link { margin-top: -4px; }
 #minicart-items, #minicart-items a { color: #aaa; }
 #minicart-items .minicart-actions a {
   color: #E55137;
