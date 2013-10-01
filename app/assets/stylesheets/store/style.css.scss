@@ -2,10 +2,10 @@
 $color1: #9c2c2b;
 $color1_light: $color1; /*#dc4c4b;*/
 $color2: #efb667;
-$color2_light: #ffd687;
+$color2_light: #fff3a7;
 $light_text_color: #eee;
 $top_header_bg: #000;
-$header_bg: #222;
+$header_bg: url(background/low_contrast_linen.png) repeat; /*#222;*/
 $slider_bg: none; /*url(background/low_contrast_linen.png) repeat;*/
 $menu_bg: $color1;
 $menu_color: $light_text_color;
@@ -318,7 +318,7 @@ border-bottom: 0;
 /* ====================== */
 
 section.single .tab-content {padding:0}
-section.single select {font-size:.9em; border-radius: 0; background: none;}
+section.single select {font-size:.9em; border-radius: 0; background: #eee; width: 150px; }
 section.single  .products .onsale {position:absolute; right:5px; padding: 5px 30px; background: $color1; color:white; z-index: 111}section.single .span5 .onsale {position:absolute; left:20px; padding: 5px 30px; background: $color1; color:white; z-index: 111}
 section.single .view-thumb .onsale {position: absolute;bottom: 5px;padding: 5px 15px;background: $color1;color: #FFF;z-index: 111;}
 section.single .hsaddtocart {position: relative;}
@@ -354,7 +354,7 @@ section.single .qty {position: relative; width:45px; margin-right: 20px; text-al
 section.single .qty input.input-text {width: 30px; text-align: center; height: 32px}
 section.single .qty .total {position: absolute; right: -15px;top: -1px;}
 section.single .qty .total a {display: block;}
-section.single .details {text-align: left;padding: 20px;background: #F5F5F5;border: 1px solid #DDD;}
+section.single.details {text-align: left;padding: 20px;background: #F5F5F5;border: 1px solid $color2;}
 
 /* =========== */
 /* Star Rating */
@@ -978,4 +978,9 @@ div.flash {
   }
   i { color: #ddd; }
 }
+.accordion-inner {
+  background: #eee;
+}
+hr { border-top-color: $color2; }
+#product-variants .option { margin-left: 0px; }
 

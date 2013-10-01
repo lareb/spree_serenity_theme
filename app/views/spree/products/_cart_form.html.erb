@@ -1,35 +1,30 @@
-<%= form_for :order, :url => populate_orders_path, :html => {:class => "form-inline"} do |f| %>
+<%= form_for :order, :url => populate_orders_url, :remote => true, :html => {:class => "form-inline"} do |f| %>
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-
-    <% if @product.variants_and_option_values(current_currency).any? %>
-      <div id="product-variants" class="columns five alpha">
-        <h6 class="product-section-title"><%= Spree.t(:variants) %></h6>
-        <ul>
-          <% @product.variants_and_option_values(current_currency).each_with_index do |variant, index| %>
-            <li>
-              <%= radio_button_tag "products[#{@product.id}]", variant.id, index == 0, 'data-price' => variant.price_in(current_currency).display_price %>
-              <label for="<%= ['products', @product.id, variant.id].join('_') %>">
-                <span class="variant-description">
-                  <%= variant_options variant %>
-                </span>
-                <% if variant_price variant %>
-                  <span class="price diff"><%= variant_price variant %></span>
-                <% end %>
-              </label>
-            </li>
-          <% end%>
-        </ul>
-      </div>
-    <% end%>
-
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
       <div data-hook="product_price" class="<% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
-
+        <% if @product.variants_and_option_values(current_currency).any? %>
+          <div id="product-variants">
+            <%= hidden_field_tag :product_id, @product.id %>
+            <%# Show options as dropdowns %>
+            <% @product.option_types.each do |option_type| %>
+              <p class="span4 option">
+                <%= option_type.presentation %><br/>
+                <%# Handle grind separately since it doesn't affect price, so need to load option values for master variant %>
+                <%# TODO: there is probably a better way to do this! %>
+                <% if option_type.name == "grind" %>
+                  <%= select_tag("option_types[#{option_type.id}]", options_for_select(option_type.option_values.map {|ov| variant = ov.variants.includes(:prices).where("product_id = #{@product.id} AND spree_prices.amount = #{@product.price}").first; [ "#{ov.presentation} #{variant_price variant}", ov.id ] if variant } ), :"data-name" => option_type.name.underscore ) %>
+                <% else %>
+                  <%= select_tag("option_types[#{option_type.id}]", options_for_select(option_type.option_values.map {|ov| variant = ov.variants.where("product_id = #{@product.id}").first; [ "#{ov.presentation} #{variant_price variant}", ov.id ] if variant } ), :"data-name" => option_type.name.underscore ) %>
+                <%end%>
+              </p>
+            <% end%>
+            <ul>
+          </div>
+        <% end %>
+        <div class="clearfix"></div>
         <div id="product-price">
-          <h6 class="product-section-title"><%= Spree.t(:price) %></h6>
-          <p class="price"><i class="icon-tag"></i><%= display_price(@product) %></p>
+          <p class="price"><i class="icon-tag"></i><span id="price"><%= display_price(@product) %></span></p>
         </div>
-
         <div class="add-to-cart">
           <%= number_field_tag (@product.variants_and_option_values.any? ? :quantity : "variants[#{@product.master.id}]"),
             1, :class => 'title', :min => 1 %>
@@ -46,4 +41,22 @@
     <% end %>
   </div>
 <% end %>
+<%= hidden_field_tag :original_price, display_price(@product) %>
+
+<script type="text/javascript">
+  <%# When weight dropdown changed, change price accordingly %>
+  $("select[data-name='weight']").change(function() {
+    var orig_price = $("#original_price").val();
+    var price_span = $("span#price");
+    var option_val = $("option:selected", this).text();
+    if (option_val.indexOf(": $") > -1) {
+      var diff = parseFloat(option_val.substring(option_val.indexOf("$") + 1, option_val.length - 2));
+      if (option_val.indexOf("Subtract") > -1) { diff = -diff; }
+      price_span.text("$" + (Number(orig_price.replace(/[^0-9\.]+/g,"")) + diff).toFixed(2));
+    }
+    else {
+      price_span.text(orig_price);
+    }
+  });
+</script>
 
