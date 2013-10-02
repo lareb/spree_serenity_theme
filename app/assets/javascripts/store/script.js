@@ -176,7 +176,9 @@ $(function(){
   });
 
   $("button, input[type=submit]").addClass("btn");
-  $("div.flash.alert, div.errorExplanation").addClass("alert alert-error");
+  $("div.flash.error, div.errorExplanation").addClass("alert alert-error");
+  $("div.flash.alert").addClass("alert");
+  $("div.flash.success").addClass("alert alert-success");
   $("div.flash.notice").addClass("alert alert-success");
 });
 

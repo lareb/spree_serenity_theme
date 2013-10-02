@@ -3,7 +3,7 @@
 		<div class="container welcome">
 			<div class="row-fluid">
 				<div class="pull-left greet">
-					Welcome shopper, <%= link_to "login here", spree.login_path %>
+					Welcome <%= current_spree_user.try(:name) || "shopper" %>, <%= current_spree_user ? link_to("logout", spree_logout_path) : link_to("login here", spree.login_path) %>
 				</div>
 				<div class="pull-right cart tright">
 				  <div class="counter">

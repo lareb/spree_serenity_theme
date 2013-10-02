@@ -1,16 +1,16 @@
 /*Variables*/
-$color1: #9c2c2b;
+$color1: #762121;
 $color1_light: $color1; /*#dc4c4b;*/
-$color2: #efb667;
-$color2_light: #fff3a7;
+$color2: #f8eda5;
+$color2_light: #fff7c5;
 $light_text_color: #eee;
 $top_header_bg: #000;
 $header_bg: url(background/low_contrast_linen.png) repeat; /*#222;*/
 $slider_bg: none; /*url(background/low_contrast_linen.png) repeat;*/
 $menu_bg: $color1;
 $menu_color: $light_text_color;
-$menu_border: 1px solid #8c1c1b;
-$main_bg_color: $color2;
+$menu_border: 1px solid #6b1717;
+$main_bg_color: $color2_light;
 
 /*
 Theme Name: Serenity
@@ -35,7 +35,7 @@ a:hover, footer a:hover, footer a.active, aside a, em.on, .theme, .page h5, a.th
 /* ================= */
 /* Background colors */
 /* ================= */
-body { background: $color2_light; }
+body { background: $main_bg_color; }
 .horizontal-nav ul, h6.subhead strong {background: #FFF}
 .container {background: none !important;}
 .homepagecontainer{background: $main_bg_color; margin-bottom: -30px;}
@@ -250,7 +250,7 @@ address .cdata {width:90%}
 .view-thumb:hover h2{margin: 0 !important;}
  .view-thumb button.info {margin-top: -1px;line-height: 20px; }
 .view-thumb.hover img {opacity: 0}
-.view-thumb:hover .mask {opacity: 1}
+.view-thumb:hover .mask {opacity: 0.9 }
 .view-thumb p {height: 60px; overflow: hidden}
 .related .view-thumb p, .upsells .view-thumb p {height: 40px}
 .related , .upsells {text-align: center;}
@@ -957,6 +957,8 @@ div.flash {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-top: none;
+  text-align: center;
+  margin: 0 10%;
 }
 .add-to-cart .title {
   width: 30px;
