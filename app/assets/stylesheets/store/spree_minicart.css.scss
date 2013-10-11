@@ -1,14 +1,32 @@
 #progress {
   display:none;
   z-index: 99;
-  top: 0px;
-  text-align: center;
-  background: #00ADEE;
-  padding: 4px 10px;
-  color: white;
-  margin: 0 auto;
-  position: fixed;
-  left:50%;
+/*  top: 0px;*/
+/*  text-align: center;*/
+/*  background: #00ADEE;*/
+/*  padding: 4px 10px;*/
+/*  color: white;*/
+/*  margin: 0 auto;*/
+/*  position: fixed;*/
+/*  left:50%;*/
+
+  border-radius: 10px;
+  height: 150px;
+  width: 150px;
+  text-align:center;
+  opacity: .5;
+  background: #111;
+  color: #eee;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 18px;
+  font-weight: bold;
+  margin: -75px 0 0 -75px;
+  .spin {
+    margin: 56px 0 45px 75px;
+    height: 1px;
+  }
 }
 
 /*nav #main-nav-bar li#link-to-cart #minicart a {*/

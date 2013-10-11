@@ -180,5 +180,7 @@ $(function(){
   $("div.flash.alert").addClass("alert");
   $("div.flash.success").addClass("alert alert-success");
   $("div.flash.notice").addClass("alert alert-success");
+
+  $("#progress .spin").spin({length: 14});
 });
 

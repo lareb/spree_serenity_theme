@@ -1,0 +1,26 @@
+<div class="row">
+	<header class="span12 prime">
+		<h3><%= @title %></h3>
+	</header>
+</div>
+<% if @orders.any? %>
+<table class="table">
+  <thead>
+    <th>Date</th>
+    <th>Order #</th>
+    <th>Total</th>
+    <th></th>
+  </thead>
+  <tbody>
+  <%= content_tag_for :tr, @orders do |order| %>
+    <td><%= order.completed_at.to_date %></td>
+    <td><%= link_to order.number, order %></td>
+    <td><%= number_to_currency order.item_total%></td>
+    <td><%= link_to "View details...", order, :class => "btn"%></td>
+  <%end%>
+  </tbody>
+</table>
+<%else%>
+  You have not made any orders yet.
+<%end%>
+
