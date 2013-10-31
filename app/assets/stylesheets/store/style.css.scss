@@ -1,6 +1,6 @@
 /*Variables*/
 $color1: #762121;
-$color1_light: $color1; /*#dc4c4b;*/
+$color1_light: #964141; /*#dc4c4b;*/
 $color2: #f8eda5;
 $color2_light: #fff7c5;
 $light_text_color: #eee;
@@ -54,7 +54,7 @@ body { background: $main_bg_color; }
     color: $menu_color;
   }
 }
-.feat .nav-pills > .active > a, .feat .nav-pills > .active > a:hover, .product .nav-pills > .active > a, .product .nav-pills > .active > a:hover, button.theme, .share a, .flex-control-paging li a.flex-active, .btn.theme, .btn-theme {background:$color1_light}
+.feat .nav-pills > .active > a, .feat .nav-pills > .active > a:hover, .product .nav-pills > .active > a, .product .nav-pills > .active > a:hover, button.theme, .share a, .flex-control-paging li a.flex-active, .btn.theme, .btn-theme, {background:$color1}
 .sidebar .tagcloud a, .comments article:hover {background: #f2f2f2}
 /* ============= */
 /* Border colors */
@@ -268,7 +268,7 @@ header.prime .catmeta {font-size: .85em; text-transform: uppercase; letter-spaci
 /* ================ */
 #products article p, .feat article p, .single article p, .product .tab-content.sideline article p, section.single .products .product p, #products article p {position:relative; background: #000; color: #fff; padding: 10px; max-width: 300px;font-size: 1em; margin: 0 auto!important;}
 #products article p a.feat article p a, .single article p a, .product .tab-content.sideline article p a, #products article p a, section.single .products .product p a, section.feat article p a{color: #fff !important;}
-#products article h2, section.single  .products .product h2, .feat article h2, .product .tab-content.sideline article h2, .single article h2{position: relative;background: $color1_light;color: #fff;line-height: 20px;margin: 0 auto;max-width: 300px;padding: 10px;font-size: 1em;}
+#products article h2, section.single  .products .product h2, .feat article h2, .product .tab-content.sideline article h2, .single article h2{position: relative;background: $color1;color: #fff;line-height: 20px;margin: 0 auto;max-width: 300px;padding: 10px;font-size: 1em;}
 body.home .products {margin-bottom: 25px}
 #products .itembox {width:300px}
 #products {text-align: center}
@@ -784,6 +784,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	.product .tab-content.sideline  {border: none !important; }
 	.product .tab-content.sideline article {width: 100% !important; }
 	#products article, section.single .span3{margin: 0 0 10px;}
+
 	section.single .flex-control-nav {display: block !important}
 	section.single .related .itembox, section.single .upsells .itembox {width:100%}
 
@@ -985,4 +986,14 @@ div.flash {
 }
 hr { border-top-color: $color2; }
 #product-variants .option { margin-left: 0px; }
+
+.btn-primary {
+  background: $color1;
+  &:hover {
+    background: $color1_light;
+  }
+  &[disabled] {
+    background: $color1_light;
+  }
+}
 
