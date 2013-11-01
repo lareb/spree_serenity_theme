@@ -996,4 +996,7 @@ hr { border-top-color: $color2; }
     background: $color1_light;
   }
 }
+.select_address input[type=radio] {
+  margin: 0;
+}
 
