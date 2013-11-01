@@ -239,18 +239,30 @@ address .cdata {width:90%}
 .view a.info:hover, .view button.info:hover { -webkit-box-shadow: 0 0 5px #000; -moz-box-shadow: 0 0 5px #000; box-shadow: 0 0 5px #000; }
 .view-thumb {position: relative;}
 .view-thumb .onsale {position:absolute; right:5px; bottom:5px; padding: 5px 15px; background: $color1; color:white; z-index: 111}
-.view-thumb img { -webkit-transform: scaleY(1); -moz-transform: scaleY(1); -o-transform: scaleY(1); -ms-transform: scaleY(1); transform: scaleY(1); -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }
-.view-thumb .mask { -webkit-transition: all 0.2s linear; -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -ms-transition: all 0.2s linear; transition: all 0.2s linear; -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; }
-.view-thumb h2 { position: relative;  background: $color1;  color: #fff;  line-height: 20px;  margin: 0;  top: 0px;  right: 0px;  padding: 10px;  font-size: 1em;  -webkit-transform: scale(); -moz-transform: scale(); -o-transform: scale(); -ms-transform: scale(); transform: scale(); -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; transition: all 0.5s linear; -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); }
-.view-thumb p { -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; position: relative;  background: #000;  color: #fff;  padding: 10px;  font-size: 1em;  margin: 0!important; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; transition: all 0.5s linear; }
-.view-thumb a.info { -webkit-transition: all 0.2s linear; -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); -webkit-transform: scale(); -moz-transform: scale(); -o-transform: scale(); display: inline-block;  text-decoration: none;  padding: 3px 8px 3.5px;  background: #000;  font-size: .7em;  color: #fff;  text-transform: uppercase;  -webkit-box-shadow: 0 0 1px #000;  -moz-box-shadow: 0 0 1px #000;  box-shadow: 0 0 1px #000; -ms-transform: scale(); transform: scale(); -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -ms-transition: all 0.2s linear; transition: all 0.2s linear; }.span4:hover .mask, .span3:hover .mask { -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1; }
-.view-thumb:hover h2,
-.view-thumb:hover p,
-.view-thumb:hover a.info { margin: 10px 0 0;  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1; }
-.view-thumb:hover h2{margin: 0 !important;}
- .view-thumb button.info {margin-top: -1px;line-height: 20px; }
+/*.view-thumb img { -webkit-transform: scaleY(1); -moz-transform: scaleY(1); -o-transform: scaleY(1); -ms-transform: scaleY(1); transform: scaleY(1); -webkit-transition: all 0.3s ease-in-out; -moz-transition: all 0.3s ease-in-out; -o-transition: all 0.3s ease-in-out; -ms-transition: all 0.3s ease-in-out; transition: all 0.3s ease-in-out; }*/
+.view-thumb .mask { -webkit-transition: all 0.4s linear; -moz-transition: all 0.4s linear; -o-transition: all 0.4s linear; -ms-transition: all 0.4s linear; transition: all 0.4s linear; -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; }
+/*.view-thumb h2 { position: relative;  background: $color1;  color: #fff;  line-height: 20px;  margin: 0;  top: 0px;  right: 0px;  padding: 10px;  font-size: 1em;  -webkit-transform: scale(); -moz-transform: scale(); -o-transform: scale(); -ms-transform: scale(); transform: scale(); -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; transition: all 0.5s linear; -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); }*/
+.view-thumb p { /*-ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); opacity: 0; */position: relative;  background: #000;  color: #fff;  padding: 10px;  font-size: 1em;  margin: 0!important; -webkit-transition: all 0.5s linear; -moz-transition: all 0.5s linear; -o-transition: all 0.5s linear; -ms-transition: all 0.5s linear; transition: all 0.5s linear; }
+/*.view-thumb a.info { -webkit-transition: all 0.2s linear; -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)"; filter: alpha(opacity=0); -webkit-transform: scale(); -moz-transform: scale(); -o-transform: scale(); display: inline-block;  text-decoration: none;  padding: 3px 8px 3.5px;  background: #000;  font-size: .7em;  color: #fff;  text-transform: uppercase;  -webkit-box-shadow: 0 0 1px #000;  -moz-box-shadow: 0 0 1px #000;  box-shadow: 0 0 1px #000; -ms-transform: scale(); transform: scale(); -moz-transition: all 0.2s linear; -o-transition: all 0.2s linear; -ms-transition: all 0.2s linear; transition: all 0.2s linear; }*/
+.span4:hover .mask, .span3:hover .mask { -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)"; filter: alpha(opacity=100); opacity: 1; }
+#feat, #products {
+  article:hover {
+    .mask {opacity: 0.9 }
+      h2, p, a.info {
+      margin: 10px 0 0;
+  /*    -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";*/
+  /*    filter: alpha(opacity=100);*/
+  /*    opacity: 1;*/
+    }
+    h2{margin: 0 !important;}
+  }
+}
+/*.view-thumb:hover h2,*/
+/*.view-thumb:hover p,*/
+/*.view-thumb:hover a.info {*/
+
+/*.view-thumb button.info {margin-top: -1px;line-height: 20px; }*/
 .view-thumb.hover img {opacity: 0}
-.view-thumb:hover .mask {opacity: 0.9 }
 .view-thumb p {height: 60px; overflow: hidden}
 .related .view-thumb p, .upsells .view-thumb p {height: 40px}
 .related , .upsells {text-align: center;}
@@ -1002,5 +1014,8 @@ hr { border-top-color: $color2; }
 }
 #user_addresses td:first-child {
   width: 300px
+}
+.price.selling a {
+  color: #fff;
 }
 
