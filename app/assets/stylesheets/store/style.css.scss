@@ -177,7 +177,7 @@ embed {max-width:100%;}
 .horizontal-nav ul ul li  a {border-left: 1px solid #DDD;border-right: 1px solid #DDD;}
 .horizontal-nav ul ul li  a:last-child  {border-left: 1px solid #DDD;border-right: 1px solid #DDD;border-bottom: 1px solid #DDD; }
 .horizontal-nav ul li:first-child a { }
-.horizontal-nav li a:hover { background:$color1; -webkit-transition: background-color 1000ms linear; -moz-transition: background-color 1000ms linear; -o-transition: background-color 1000ms linear; -ms-transition: background-color 1000ms linear; transition: background-color 1000ms linear; }
+.horizontal-nav li a:hover { background:$color1_light; -webkit-transition: background-color 1000ms linear; -moz-transition: background-color 1000ms linear; -o-transition: background-color 1000ms linear; -ms-transition: background-color 1000ms linear; transition: background-color 1000ms linear; }
 .home-panel {
   text-align: center;
   margin:0 auto 20px;
@@ -985,9 +985,10 @@ div.flash {
   background: #eee;
 }
 hr { border-top-color: $color2; }
+
 #product-variants .option { margin-left: 0px; }
 
-.btn-primary {
+.btn-primary, .btn-theme, .btn.theme {
   background: $color1;
   &:hover {
     background: $color1_light;
@@ -998,5 +999,8 @@ hr { border-top-color: $color2; }
 }
 .select_address input[type=radio] {
   margin: 0;
+}
+#user_addresses td:first-child {
+  width: 300px
 }
 
