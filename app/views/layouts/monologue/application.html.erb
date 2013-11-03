@@ -29,12 +29,10 @@
             <%= msg %>
           </div>
         <% end %>
-		    <div class="wrap">
-			    <div class="row-fluid">
-				    <div class="span8 list">
-              <%= yield %>
-            </div>
-            <%= render 'layouts/monologue/application/sidebar' %>
+		    <div class="row-fluid">
+          <%= render 'layouts/monologue/application/sidebar' %>
+			    <div class="span9 list sideline">
+            <%= yield %>
           </div>
         </div>
       </div>

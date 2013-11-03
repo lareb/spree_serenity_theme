@@ -29,9 +29,9 @@ License URI: license.txt
 body {color:#333}
 a {color:black}
 button.theme, .share a, .share a:hover, .horizontal-nav li a:hover, .btn.theme, .btn-theme, .product_list_widget .amount {color:white}
-footer {color: #777}
-footer a {color: #CCC}
-a:hover, footer a:hover, footer a.active, aside a, em.on, .theme, .page h5, a.theme , nav.sidebar-item h5, #comments strong {color: $color1_light}
+#footer {color: #777}
+#footer a {color: #CCC}
+a:hover, #footer a:hover, #footer a.active, aside a, em.on, .theme, .page h5, a.theme , nav.sidebar-item h5, #comments strong {color: $color1_light}
 /* ================= */
 /* Background colors */
 /* ================= */
@@ -61,15 +61,15 @@ body { background: $main_bg_color; }
 /* ============= */
 .promo img {border: 1px solid #ddd}
 .promo img:hover {border: 1px solid #333}
-.blog article, .archive article, .search article, .line, hr, .product .sidebar li {}
-.tab-content.sideline {
+.blog section, .archive article, .search article, .line, hr, .product .sidebar li {}
+.sideline {
   border-left: 1px solid $color2;
 }
 header.prime,  .gmap  {border-bottom: 1px solid $color2;}
 /*  ========== */
 /* Font family */
 /*  ========== */
-.horizontal-nav ul li a, section.single .cross-wrapper header, footer .foot strong {text-transform: uppercase}
+.horizontal-nav ul li a, section.single .cross-wrapper header, #footer .foot strong {text-transform: uppercase}
 #tweet .tweet_time a, .share a {font-size: .85em}
 strong, section.single .cross-wrapper header {font-weight: 700}
 button.theme {text-shadow: none}
@@ -400,17 +400,17 @@ p.stars span a.star-5 { width: 80px; z-index: 6; }
 /* ============ */
 
 section.blog .bloglist {padding-top:30px}
-.blog header i {padding-left:10px}
-.blog article {padding: 30px 0}
-.blog article:first-child {padding-top:0}
-.blog article h4 {margin-top:0}
-.blog article:first-child, .blog .list article:first-child {border:0}
-.blog article h4 a {font-size: 16px; text-transform: uppercase}
-.blog small.date, .blog small.comments {font-style: italic}
-.blog small.date { padding:5px 5px 5px 0}
+/*.blog header i {padding-left:10px}*/
+.blog section {padding: 30px 0}
+.blog section:first-child {padding-top:0}
+.blog section h4 {margin-top:0}
+.blog section:first-child, .blog .list section:first-child {border:0}
+.blog section h4 a {font-size: 16px; text-transform: uppercase}
+.blog .posted, .blog small.comments {font-style: italic}
+.blog .posted { padding:5px 5px 5px 0}
 .blog small.comments {padding:5px; }
-.blog .post article {padding-top:20px}
-.blog .post article:first-child {padding-top: 0}
+.blog .post section {padding-top:20px}
+.blog .post section:first-child {padding-top: 0}
 .share {text-align: center}
 .share a {padding:5px}
 
@@ -422,10 +422,10 @@ section.blog .bloglist {padding-top:30px}
 .archive article {padding: 30px 0}
 .archive article:first-child {}
 .archive article h4 {margin-top:0}
-.blog .list article:first-child {border:0}
+.blog .list section:first-child {border:0}
 .archive article h4 a {font-size: 16px; text-transform: uppercase}
-.archive small.date, .blog small.comments {font-style: italic}
-.archive small.date { padding:5px 5px 5px 0}
+.archive .posted, .blog small.comments {font-style: italic}
+.archive .posted { padding:5px 5px 5px 0}
 .archive small.comments {padding:5px; }
 .archive .post article {padding-top:20px}
 .archive .post article:first-child {padding-top: 0}
@@ -438,10 +438,10 @@ section.blog .bloglist {padding-top:30px}
 .search article {padding: 30px 0}
 .search article:first-child {padding-top:0}
 .search article h4 {margin-top:0}
-.search article:first-child, .blog .list article:first-child {border:0}
+.search article:first-child, .blog .list section:first-child {border:0}
 .search article h4 a {font-size: 16px; text-transform: uppercase}
-.search small.date, .blog small.comments {font-style: italic}
-.search small.date { padding:5px 5px 5px 0}
+.search .posted, .blog small.comments {font-style: italic}
+.search .posted { padding:5px 5px 5px 0}
 .search small.comments {padding:5px; }
 .search .post article {padding-top:20px}
 .search .post article:first-child {padding-top: 0}
@@ -510,17 +510,17 @@ ul#payment-methods {margin:0 0 20px}
 /* Footer section */
 /* ============== */
 
-footer {padding:30px 0; margin-top: 30px;border-top: 3px solid $color1; background: #000;}
-footer .foot strong {padding-bottom: 10px; display: block}
-footer .foot ul, footer .social ul {margin: 0; padding: 0}
-footer .foot ul li {list-style: none}
-footer .social ul li {list-style: none; float:left; padding-left:10px}
-footer .social li a {display: inline-block;}
-footer .social .pull-left, footer .social .pull-right {width:50%} footer .social .pull-right ul {float: right}
-footer input, footer .add-on {border-radius: 0 !important}
-footer .doubleline {padding: 20px 0 10px; background: #fff;border-top: 1px solid #CECECE; border-bottom: 1px solid #CECECE;  margin: 30px 0}
-footer .currency {text-align: right} footer .currency a {padding-left: 5px}
-footer article {padding-top: 0 !important;border: none !important;}
+#footer {padding:30px 0; margin-top: 30px;border-top: 3px solid $color1; background: #000;}
+#footer .foot strong {padding-bottom: 10px; display: block}
+#footer .foot ul, #footer .social ul {margin: 0; padding: 0}
+#footer .foot ul li {list-style: none}
+#footer .social ul li {list-style: none; float:left; padding-left:10px}
+#footer .social li a {display: inline-block;}
+#footer .social .pull-left, #footer .social .pull-right {width:50%} #footer .social .pull-right ul {float: right}
+#footer input, #footer .add-on {border-radius: 0 !important}
+#footer .doubleline {padding: 20px 0 10px; background: #fff;border-top: 1px solid #CECECE; border-bottom: 1px solid #CECECE;  margin: 30px 0}
+#footer .currency {text-align: right} #footer .currency a {padding-left: 5px}
+#footer article {padding-top: 0 !important;border: none !important;}
 .carousel {margin-bottom: 0}
 .carousel-control {top:90%; border: none; background: none}
 .carousel-control.right {left: 60px}
@@ -808,9 +808,9 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	#flexslider-product {margin-bottom: 30px; text-align: center}
 	/* .sidebar aside {padding:0 20px} */
 	.cart-pay, .cart-pay .cart-checkout {text-align: center !important}
-	footer { padding: 20px}
-	footer .foot article {margin-bottom: 15px}
-	footer .foot div[class*="span"] {margin-bottom: 20px}
+	#footer { padding: 20px}
+	#footer .foot article {margin-bottom: 15px}
+	#footer .foot div[class*="span"] {margin-bottom: 20px}
 	.feat .span12{ width: 100%; }
     .feat .row{margin-left: 0;}
 	.feat .row .span4 { width: 97%;}
@@ -830,7 +830,7 @@ a img.aligncenter { display: block; margin-left: auto; margin-right: auto; }
 	section.single {padding: 30px 0}
 	section.single .cross-wrapper .span3 {padding: 10px 0}
 	section.single .decider, section.single .decidernote {text-align: center}
-	footer .currency {text-align: left}
+	#footer .currency {text-align: left}
 	.login .form-horizontal .controls {margin-left: 0px}
 	#nav { display: none !important}
 	.js .selectnav { display: block; font-size:0.9em}
@@ -861,7 +861,7 @@ li.nowrap {
 #sidebar_products_search div.navigation {
   border-bottom: none;
 }
-section.staticcontent .sideline { padding-left: 15px; }
+.sideline { padding-left: 15px; }
 
 .checkout {
   #checkout>div:first-child {
@@ -1018,4 +1018,10 @@ hr { border-top-color: $color2; }
 .price.selling a {
   color: #fff;
 }
+.post-header small span {
+  font-weight: normal;
+  text-transform: none;
+}
+.monologue.sidebar { margin-top: 0px }
+section.post a.button {color: $color1_light}
 

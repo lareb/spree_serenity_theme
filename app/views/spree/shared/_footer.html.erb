@@ -2,7 +2,7 @@
 <!-- Footer section -->
 <!-- ============== -->
 
-<footer>
+<footer id="footer">
 	<div class="container">
 		<section class="row foot">
 			<article class="span3">
@@ -13,11 +13,15 @@
 				</ul>
 			</article>
 			<article class="span3">
-				<strong>Latest Post</strong>
+				<strong>News</strong>
 				<ul>
-					<li><a href="post-right-sidebar.html">Big things are on the way</a><br /><small>posted on April 24, 2012</small></li>
-					<li><a href="post-right-sidebar.html">Product Image Galleries</a><br /><small>posted on June 13, 2012</small></li>
-					<li><a href="post-right-sidebar.html">So many options Reign is feature-packed</a><br /><small>posted on May 9, 2012</small></li>
+				  <% Monologue::Post.published.limit(3).each do |post| %>
+				    <li>
+					    <%= link_to post.title, post.full_url%>
+					    <br />
+					    <small>posted on <%= I18n.localize(post.published_at.to_date, format: :long) %></small>
+				    </li>
+			    <%end%>
 				</ul>
 			</article>
 			<article class="span3">
