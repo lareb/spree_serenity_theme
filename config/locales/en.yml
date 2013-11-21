@@ -4,6 +4,7 @@
 en:
   hello: "Hello world"
   update: "Update"
+  destroy: "Delete"
   monologue:
     posts:
       post:
