@@ -15,7 +15,7 @@
       <div class="slides home-span12">
         <div class="container">
 	        <div id="flexslider" class="flexslider row">
-	          <%= insert_banner_box category: "home", class: "slides span12", list: true%>
+	          <%= insert_banner_box category: "home", ul_class: "slides span12", list: true %>
 	        </div>
         </div>
       </div>
@@ -34,7 +34,7 @@
       </section>
       %>
       <div class="container home">
-
+        <%#
 	      <!-- ================ -->
 	      <!-- Featured section -->
 	      <!-- ================ -->
@@ -111,6 +111,7 @@
 			      </div>
 		      </div>
 	      </section>
+	      %>
       </div>
     </div>
     <%= render :partial => 'spree/shared/footer' %>
