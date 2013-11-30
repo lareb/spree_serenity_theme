@@ -1,7 +1,7 @@
 <%= form_for :order, :url => populate_orders_url, :remote => true, :html => {:class => "form-inline"} do |f| %>
   <div id="inside-product-cart-form" data-hook="inside_product_cart_form" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
     <% if @product.price_in(current_currency) and !@product.price.nil? %>
-      <div data-hook="product_price" class="<% if !@product.has_variants? %> alpha <% else %> omega <% end %>">
+      <div data-hook="product_price">
         <% if @product.variants_and_option_values(current_currency).any? %>
           <div id="product-variants">
             <%= hidden_field_tag :product_id, @product.id %>
@@ -9,12 +9,7 @@
             <% @product.option_types.each do |option_type| %>
               <p class="span4 option">
                 <%= option_type.presentation %><br/>
-                <%# TODO: there is probably a better way to do this! %>
-                <%# if option_type.name == "grind" %>
-                  <%#= select_tag("option_types[#{option_type.id}]", options_for_select(option_type.option_values.map {|ov| variant = ov.variants.includes(:prices).where("product_id = #{@product.id} AND spree_prices.amount = #{@product.price}").first; [ "#{ov.presentation} #{variant_price variant}", ov.id ] if variant } ), :"data-name" => option_type.name.underscore ) %>
-                <%# else %>
-                  <%= select_tag("option_types[#{option_type.id}]", options_for_select(option_type.option_values.map {|ov| variant = ov.variants.where("product_id = #{@product.id}").first; [ "#{ov.presentation} #{variant_price variant}", ov.id ] if variant } ), :data => { :name => option_type.name.underscore, :modifies_price => true } ) %>
-                <%#end%>
+                  <%= select_tag("option_types[#{option_type.id}]", options_for_select(option_type.option_values.map {|ov| variant = ov.variants.where("product_id = #{@product.id}").first; [ "#{ov.presentation} #{variant_price variant}", ov.id ] if variant } ), :data => { :name => option_type.name.underscore, :modifies_price => true }, :style => "width:95%" ) %>
               </p>
             <% end%>
             <ul>
