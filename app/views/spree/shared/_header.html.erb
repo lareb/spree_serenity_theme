@@ -9,7 +9,7 @@
 				<div class="pull-right cart tright">
 				  <div class="counter">
 				    <i class="icon-basket"></i>
-  				  <span id="link-to-cart" data-hook><%= defined?(current_order) ? link_to_cart("Your cart") : link_to("Your cart", spree.cart_path) %></span>
+  				  <span id="link-to-cart" data-hook><%= defined?(current_order) ? link_to_cart : link_to("Your cart", spree.cart_path) %></span>
 				  </div>
 				</div>
 			</div>
