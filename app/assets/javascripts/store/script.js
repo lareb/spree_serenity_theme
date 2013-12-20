@@ -175,7 +175,7 @@ $(function(){
     $(this).appendTo($(this).parent());
   });
 
-  $("button, input[type=submit]").addClass("btn");
+  $("button, input[type=submit], .button").addClass("btn");
   $("div.flash.error, div.errorExplanation").addClass("alert alert-error");
   $("div.flash.alert").addClass("alert");
   $("div.flash.success").addClass("alert alert-success");
