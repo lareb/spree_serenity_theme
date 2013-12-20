@@ -34,7 +34,6 @@
       </section>
       %>
       <div class="container home">
-        <%#
 	      <!-- ================ -->
 	      <!-- Featured section -->
 	      <!-- ================ -->
@@ -49,46 +48,13 @@
 
 				        <!-- Feat tab -->
 				        <div class="tab-pane active" id="feat">
-	       	  	  	<article class="span4">
-						        <div class="view view-thumb">
-							        <img src="assets/store/products/1.jpg" alt="" />
-							        <div class="mask">
-                        <p>Product description Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                        <a href="product.html" class="info">View</a>
-                        <a href="checkout.html" class="info">Buy</a>
-      							  </div>
-						        </div>
-						        <h2>$69</h2>
-						        <p><a href="#">Sample Featured Product</a></p>
-					        </article>
-					        <article class="span4">
-						        <div class="view view-thumb">
-        							<img src="assets/store/products/2.jpg" alt="" />
-							        <div class="mask">
-                        <p>Product description Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                        <a href="product.html" class="info">View</a> <a href="checkout.html" class="info">Buy</a>
-							        </div>
-						        </div>
-						        <h2>$69</h2>
-						        <p><a href="#">Sample Featured Product</a></p>
-					        </article>
-					        <article class="span4">
-						        <div class="view view-thumb">
-							        <img src="assets/store/products/4.jpg" alt="" />
-							        <div class="mask">
-                        <p>Product description Vestibulum ante ipsum primis in faucibus orci luctus.</p>
-                        <a href="product.html" class="info">View</a> <a href="checkout.html" class="info">Buy</a>
-							        </div>
-						        </div>
-						        <h2>$69</h2>
-						        <p><a href="#">Sample Featured Product</a></p>
-					        </article>
+				          <%= render @featured_products %>
 				        </div>
 				      </div> <!-- End tab-content -->
 			      </div>
 		      </div>
 
-
+<%#
 		      <!-- ====== -->
 		      <!-- Brands -->
 		      <!-- ====== -->

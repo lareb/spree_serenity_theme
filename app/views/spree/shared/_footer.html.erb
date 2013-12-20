@@ -5,14 +5,14 @@
 <footer id="footer">
 	<div class="container">
 		<section class="row foot">
-			<article class="span3">
+			<article class="span4">
 				<strong>Quick Links</strong>
   			<ul>
 				  <%= render :partial => "spree/static_content/static_content_list", :collection => Spree::Page.visible.footer_links, :as => :page %>
 					<li><%= link_to "Contact Us", spree.contact_path %></li>
 				</ul>
 			</article>
-			<article class="span3">
+			<article class="span4">
 				<strong>News</strong>
 				<ul>
 				  <% Monologue::Post.published.limit(3).each do |post| %>
@@ -24,18 +24,19 @@
 			    <%end%>
 				</ul>
 			</article>
-			<article class="span3">
+			<%#--article class="span3">
 				<strong>Tweets</strong>
 				<div id="tweet"></div>
-			</article>
-			<article class="span3">
+			</article%>
+			<article class="span4">
+			  <%#
 				<strong>Newsletter</strong>
 				<div>
 					<form class="form-inline">
 					<input class="input-medium" type="text" placeholder="Email address">
 					<button class="btn"><i class="icon-direction"></i></button>
 					</form>
-				</div>
+				</div>%>
 				<address class="row-fluid">
 					<div class="pull-left clabel"><i class="icon-location"></i></div>
 					<div class="pull-left cdata">5601 W. Jackson St, Muncie, IN 47303</div>
@@ -51,15 +52,15 @@
 	<section class="row-fluid doubleline">
 		<div class="container">
 			<div class="span6">
-				<div class="payment amex"></div>
 				<div class="payment mastercard"></div>
 				<div class="payment visa"></div>
+				<div class="payment discover"></div>
+				<%#
+				<div class="payment amex"></div>
 				<div class="payment paypal"></div>
-				<!--
 				<div class="payment cirrus"></div>
 				<div class="payment delta"></div>
 				<div class="payment direct-debit"></div>
-				<div class="payment discover"></div>
 				<div class="payment ebay"></div>
 				<div class="payment googlecheckout"></div>
 				<div class="payment maestro"></div>
@@ -70,7 +71,7 @@
 				<div class="payment visaelectron"></div>
 				<div class="payment 2checkout"></div>
 				<div class="payment westernunion"></div>
-				-->
+				%>
 			</div>
 		</div>
 	</section>
@@ -80,8 +81,9 @@
 		<div class="pull-left">&copy; <%= DateTime.now.year %> Alliance World Coffees</div>
 		<div class="pull-right">
 			<ul>
-				<li><a href="#"><i class="icon-facebook"></i></a></li>
-				<li><a href="#"><i class="icon-twitter"></i></a></li>
+				<li><a href="https://www.facebook.com/AllianceWorldCoffees"><i class="icon-facebook"></i></a></li>
+				<li><a href="http://instagram.com/allianceworldcoffees"><i class="icon-instagram"></i></a></li>
+				<!--li><a href="#"><i class="icon-twitter"></i></a></li>-->
 			</ul>
 		</div>
 		</div>

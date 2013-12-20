@@ -12,19 +12,7 @@
   </header>
 <% end %>
   <% if products.any? %>
-    <% products.each do |product| %>
-      <article id="product_<%= product.id %>" class="<%= cycle("alpha", "secondary", "", "omega secondary", :name => "classes") %>" data-hook="products_list_item" itemscope itemtype="http://schema.org/Product">
-        <div class="view view-thumb">
-          <%= link_to large_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
-          <%= link_to product, :class => "mask" do %>
-            <p><%= truncate(product.description, :length => 100) %></p>
-            <%#= link_to "View", product, :class => 'info', :itemprop => "description", :title => product.name %>
-          <%end%>
-        </div>
-        <h2 class="price selling" itemprop="price"><%= link_to display_price(product), product %></h2>
-        <p class="product-title"><%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %></p>
-      </article>
-    <% end %>
+    <%= render products %>
     <% reset_cycle("classes") %>
   <% end %>
 </div>
@@ -34,4 +22,5 @@
     <%= paginate paginated_products, :theme => 'twitter-bootstrap', :pagination_class => "pagination-centered" %>
   </div>
 <% end %>
+<div class='alert text-center'><i class='icon-help'></i> Didn’t find what you’re looking for? <%= link_to 'Contact us', contact_path %>.
 
