@@ -1,0 +1,22 @@
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container" data-monologue="nav-bar">
+      <%= link_to "AWC News", admin_path, class: "brand" %>
+      <ul class="nav pull-left" data-monologue="nav-bar-left">
+        <%= activable_li_tag_with_link t(".add_a_monologue"), new_admin_post_path %>
+        <%= activable_li_tag_with_link t(".list_monologues"), admin_posts_path, admin_path %>
+        <%= activable_li_tag_with_link t(".comments"), admin_comments_path %>
+      </ul>
+
+      <ul class="nav pull-right" data-monologue="nav-bar-right">
+        <%#= activable_li_tag_with_link t(".users"), admin_users_path %>
+        <% if ActionController::Base.perform_caching %>
+          <%= activable_li_tag_with_link t(".cache"), admin_cache_path %>
+        <% end %>
+        <li><%= link_to "Back to store admin", spree.admin_path %></li>
+        <li><%= link_to t(".log_out"), spree.logout_path %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
