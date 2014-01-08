@@ -2,7 +2,9 @@
   <div class="view view-thumb" style="position:relative">
     <%= link_to large_image(product, :itemprop => "image"), product, :itemprop => 'url' %>
     <%= link_to product, :class => "mask" do %>
-      <p><%= truncate(HTMLEntities.new.decode(strip_tags(product.description)), :length => 100) %></p>
+      <p>
+        <%= truncate(HTMLEntities.new.decode(strip_tags(product.description)), :length => 100) %>
+      </p>
     <%end%>
     <%= link_to truncate(product.name, :length => 50), product, :class => 'info', :itemprop => "name", :title => product.name %>
   </div>
