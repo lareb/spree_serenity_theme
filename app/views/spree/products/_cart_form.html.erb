@@ -9,10 +9,7 @@
             <% @product.option_types.each do |option_type| %>
               <p class="span4 option">
                 <%= option_type.presentation %><br/>
-                  <% dropdown_options = option_type.option_values.map { |ov|
-                    variant = ov.product_variant_with_default_weight_unless_weight_type(@product.id)
-                    [ "#{ov.presentation} #{variant_price variant}", ov.id ] if variant } %>
-                  <%= select_tag("option_types[#{option_type.id}]", options_for_select(dropdown_options), :data => { :name => option_type.name.underscore, :modifies_price => true }, :style => "width:95%" ) %>
+                  <%= select_tag("option_types[#{option_type.id}]", option_type_options_for_select(option_type), :data => { :name => option_type.name.underscore, :modifies_price => true }, :style => "width:95%" ) %>
               </p>
             <% end %>
             <ul>
