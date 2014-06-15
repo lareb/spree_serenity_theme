@@ -1,0 +1,8 @@
+<p><%= Spree.t(:inquiry_has_been_received, :site => Spree::Config[:site_name]) %></p>
+<%= render :partial => 'details' %>
+<p style='font-size: 80%'>
+  <%= Spree.t(:ip_address) %>: <%= @inquiry.http_remote_addr %><br/>
+  <%= Spree.t(:user_agent) %>: <%= @inquiry.http_user_agent %><br/>
+  <%= Spree.t(:viewport_size) %>: <%= @inquiry.client_viewport_size %><br/>
+</p>
+

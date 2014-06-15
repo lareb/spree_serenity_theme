@@ -1,0 +1,13 @@
+<hr/>
+<p><strong><%= Spree.t(:from) %>:</strong> <%= @inquiry.name %> (<%= @inquiry.email %>)</p>
+<p><strong><%= Spree.t(:inquiry_type) %>:</strong> <%= @inquiry.inquiry_type %></p>
+<% unless @inquiry.phone_number.blank? %>
+  <p><strong><%= Spree.t(:contact_phone_number) %>:</strong> <%= @inquiry.phone_number %></p>
+<% end %>
+<% unless @inquiry.order_no.blank? %>
+  <p><strong><%= Spree.t(:inquiry_order_no) %>:</strong> <%= @inquiry.order_no %></p>
+<% end %>
+<strong><%= Spree.t(:message) %>:</strong>
+<p><%= @inquiry.message %></p>
+<hr/>
+
