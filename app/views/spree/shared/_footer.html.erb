@@ -78,14 +78,15 @@
 
 	<section class="row-fluid social">
 		<div class="container">
-		<div class="pull-left">&copy; <%= DateTime.now.year %> Alliance World Coffees</div>
-		<div class="pull-right">
-			<ul>
-				<li><a href="https://www.facebook.com/AllianceWorldCoffees"><i class="icon-facebook"></i></a></li>
-				<li><a href="http://instagram.com/allianceworldcoffees"><i class="icon-instagram"></i></a></li>
-				<!--li><a href="#"><i class="icon-twitter"></i></a></li>-->
-			</ul>
-		</div>
+			<div class="span4">&copy; <%= DateTime.now.year %> Alliance World Coffees<br/></div>
+			<div class='span4'>Website built by <%= mail_to "dbwinger@gmail.com".gsub("@"," at ").gsub(".", " dot "), "Daryl Winger" %></div>
+			<div class="span4">
+				<ul class="pull-right">
+					<li><a href="https://www.facebook.com/AllianceWorldCoffees" target='_blank'><i class="icon-facebook"></i></a></li>
+					<li><a href="http://instagram.com/allianceworldcoffees" target='_blank'><i class="icon-instagram"></i></a></li>
+					<!--li><a href="#"><class i="icon-twitter"></i></a></li>-->
+				</ul>
+			</div>
 		</div>
 	</section>
 </footer>

@@ -124,6 +124,10 @@ function thumbHover(){
 	}
 }
 
+// replace obfuscated email address w/javascript for bots
+function replaceSafeEmail(safeEmail) {
+  return safeEmail.replace(" at ", "@").replace(" dot ", ".");
+}
 
 // ============
 // Initial load
@@ -182,5 +186,9 @@ $(function(){
   $("div.flash.notice").addClass("alert alert-success");
 
   $("#progress .spin").spin({length: 14});
+
+  $("a[href^='mailto:']").hover(function() {
+     $(this).attr("href", replaceSafeEmail($(this).attr("href")));
+  });
 });
 
