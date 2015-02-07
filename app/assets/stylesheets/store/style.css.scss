@@ -1017,7 +1017,7 @@ hr { border-top-color: $color2; }
 
 #product-variants .option { margin-left: 0px; }
 
-.btn-primary, .btn-theme, .btn.theme {
+.btn-primary, .btn-theme, .btn.theme, a.continue {
   background: $color1;
   &:hover {
     background: $color1_light;
