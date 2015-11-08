@@ -4,12 +4,12 @@ Deface::Override.new(:virtual_path => 'spree/checkout/_delivery',
 Deface::Override.new(:virtual_path => 'spree/checkout/_confirm',
                     :name => "remove_images_confirm",
                     :remove => "td.item-image, thead th:first-child, colgroup col:first-child")
-Deface::Override.new(virtual_path: 'spree/checkout/_payment',
+Deface::Override.new(virtual_path: 'spree/checkout/_delivery',
                     name: 'add_po_number_input',
-                    insert_bottom: "[data-hook=\"checkout_payment_step\"]",
+                    insert_after: "#shipping_method",
                     text: "
 <p class='field' data-hook='po_number'>
-  <%= form.label :po_number, 'PO #' %><br/>
+  <%= form.label :po_number, 'PO #: ' %>&nbsp;&nbsp;
   <%= form.text_field :po_number %>
 </p>"
 )
