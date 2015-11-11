@@ -14,6 +14,9 @@ Deface::Override.new(:virtual_path => 'monologue/posts/_post_header',
                     :name => 'small_date',
                     :surround => ".posted",
                     :text => "<small><%= render_original %></small>")
+Deface::Override.new(virtual_path: 'monologue/posts/_post_header',
+                    name: 'remove_user',
+                    remove: "span[data-monologue=user]")
 Deface::Override.new(:virtual_path => 'layouts/monologue/application/_sidebar',
                     :name => "sidebar_bootstrap",
                     :set_attributes => "aside",
@@ -27,4 +30,3 @@ Deface::Override.new(:virtual_path => 'monologue/posts/_post',
                     :name => 'readmore_class',
                     :set_attributes => ".button",
                     :attributes => {:class => "theme"})
-
